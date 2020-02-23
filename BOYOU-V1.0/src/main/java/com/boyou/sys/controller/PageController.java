@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class PageController {
 	
-	
 	@RequestMapping("doIndexBY")
 	public String doIndexBY() {
 		return "details";
