@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0051)http://www.uuwego.com/scenery/questions.aspx?id=100 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>清远黄腾峡漂流门票问答_清远黄腾峡漂流门票旅游问题咨询_欢乐时光旅游网</title>
+<meta name="keywords" content="清远黄腾峡漂流门票问答,清远黄腾峡漂流门票旅游问题咨询,清远黄腾峡漂流门票问题提问">
+<meta name="description" content="欢乐时光旅游网为您提供最全的清远黄腾峡漂流门票旅游问答信息，包括清远黄腾峡漂流门票问题、网友回答以及欢乐时光旅游网官方解答。在这里您可以觉得所有旅游中遇到的问题。另外在欢乐时光旅游网还可以预订清远黄腾峡漂流门票打折门票，游玩后发表点评还可获得点评积分。">
+<link rel="stylesheet" type="text/css" href="./common.css">
+<link type="text/css" rel="Stylesheet" href="./scenery.css">
+<style type="text/css">
+	.inputTexts{ height:26px; line-height:26px; border:1px solid #EEE;margin-right:5px; padding:0 3px; float:left;margin-top:6px;}
+	.show .consult .formBox{position:relative;}
+	#box_Questions{position:absolute;bottom:-30px;right:100px; color:#c00;}
+	#box_Proof{ color:#c00;float:left;margin-right:5px; }
+	.getCode img{margin-top:9px;}
+</style>
+</head>
+<body style="">
+<div class="show">
+	<div class="content consult" pagecount="1">
+	<form action="http://www.uuwego.com/scenery/questions.aspx?id=100&amp;act=save" method="post" name="TourExForm" id="TourExForm" novalidate="novalidate">
+		<div class="formBox"><textarea placeholder="咨询内容" name="Questions" id="Questions" cols="60" rows="6" class="inputText"></textarea></div>
+		<div class="formBtn">
+		<a id="login" rel="nofollow" href="javascript:void(0);">游客您好，咨询请先登录！</a>
+		<input placeholder="验证码" name="Proof" type="text" class="inputTexts userd" id="Proof" onfocus="this.onfocus=&#39;&#39;;get_Code(&#39;/&#39;);" size="10" style="display: none;"><span class="getCode userd" id="imgid" style="margin-right: 10px; float: left; display: none;">点击获取验证码 </span>
+		<input type="submit" name="submit" class="btn userd" value="提交咨询" style="height: 40px; line-height: 40px; width: 90px; display: none;">
+		</div>
+		</form>
+		<div class="listBox">
+			<dl class="clearfix">
+				<dt>
+					<div><img src="./noAvatar.gif" onerror="this.onerror=&#39;&#39;;this.src=&#39;/sys/Images/noAvatar.gif&#39;;" width="75" height="75" alt=""></div>
+					<p class="user">游客</p>
+					<p class="date"><em>2013-11-13</em></p>
+				</dt>
+				<dd>
+					<div class="box clearfix">
+						<b class="arrow"></b>
+						<div class="desc">我想知道所有的房间？</div>
+						<div class="reply"><b>客服回复：</b>13711192089</div>
+					</div>
+				</dd>
+			</dl>
+			<dl class="clearfix">
+				<dt>
+					<div><img src="./noAvatar.gif" onerror="this.onerror=&#39;&#39;;this.src=&#39;/sys/Images/noAvatar.gif&#39;;" width="75" height="75" alt=""></div>
+					<p class="user">游客</p>
+					<p class="date"><em>2013-04-19</em></p>
+				</dt>
+				<dd>
+					<div class="box clearfix">
+						<b class="arrow"></b>
+						<div class="desc">花园汤屋的浴池在户外还是在室内的？</div>
+						<div class="reply"><b>客服回复：</b>阳台上</div>
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="./jquery.js.下载"> </script>
+<script type="text/javascript" src="./jquery.validate.js.下载"> </script>
+<script type="text/javascript" src="./jquery.validate.check.js.下载"> </script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#TourExForm").validate({
+	rules:{
+		Questions: {required:true,rangelength: [10,200]},
+		Proof:{required: true,remote: {url:'/sys/ajax/CheckProof.ashx',type:'get',dataType:'json',data:{'checktext':function(){return $('#Proof').val();}},cache:false}}
+	},
+	messages: {
+		Questions: {required: '请填写内容!'},
+		Proof:{required:'请填写验证码!',remote:function(){get_Code('/');return '验证码错误!'}}
+	}
+	}); 
+    var lineQuestion = 'True';
+	if (GetCookie('username') != ''){
+		$('#login').hide();
+		$('.userd').show();
+	}else{ 
+		if(lineQuestion == 'True'){
+			$('#login').show();
+			$('.userd').hide();
+		}else{
+			$('#login').hide();
+			$('.userd').show();
+		}
+	}
+    $("#TourExForm").submit(function (e) {
+False
+        if (typeof (parent) != "undefined") {
+            parent.ShowWindow('', '', webpath + 'alertlogin.aspx');
+        } else {
+            ShowWindow('', '', webpath + 'alertlogin.aspx');
+        }
+        return false;
+    });
+    $("#login").click(function () {
+        if (GetCookie('username') != '') { return true; }
+        if (typeof (parent) != "undefined") {
+            parent.ShowWindow('', '', webpath + 'alertlogin.aspx');
+        } else {
+            ShowWindow('', '', webpath + 'alertlogin.aspx');
+        }
+    });
+});
+</script>
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body></html>
