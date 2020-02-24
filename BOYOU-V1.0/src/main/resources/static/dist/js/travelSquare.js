@@ -1,16 +1,10 @@
 
 /*文档事件就绪函数*/
 $(function(){
-	doLoadUi("header","/doPageMudule/header");
-	doLoadUi("footer","/doPageMudule/footer");
+	debugger
+	$("#header").load("/doPageModule/header");
+	$("#footer").load("/doPageModule/footer");
 })
-
-/*加载网页元素函数*/
-function doLoadUi(id,url){
-	$("#"+id).click(function(){
-		$("#mainContentId").load(url);
-	});
-}
 
 /* 点击更多打开筛选输入框时间事件函数 */
 function openPayLine2(moreButton){

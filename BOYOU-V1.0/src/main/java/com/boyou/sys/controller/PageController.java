@@ -36,9 +36,9 @@ public class PageController {
 	 * @param mudule 页面模块名称
 	 * @return 模块文件路径
 	 */
-	@RequestMapping("doPageMudule/{module}")
-	public String doPageMudule(@PathVariable String mudule) {
-		return "common/"+mudule;
+	@RequestMapping("doPageModule/{module}")
+	public String doPageMudule(@PathVariable String module) {
+		return "common/"+module;
 	}
 	
 }
