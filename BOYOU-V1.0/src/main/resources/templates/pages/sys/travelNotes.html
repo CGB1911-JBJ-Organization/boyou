@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>游记广场</title>
+		<link href="dist/css/travelNotes/travelSquare.css" rel="stylesheet"/>
+		<link href="dist/css/travelNotes/selectFrom.css" rel="stylesheet"/>
+		<script src="bower_components/jquery-1.8.3.js"></script>
+		<script type="text/javascript" src="dist/js/travelSquare.js"></script>
+	</head>
+	<body>
+	    <!-- 头部分(header) -->
+		<div class="header" id="header">
+		
+		</div>
+		
+		<!-- 搜索栏 -->
+        <div class="searchFence">
+            <form action="">
+	           <input type="text" class="input_keyword" name="search"/>
+	           <input type="submit" class="do_search" value="">
+            </form>
+        </div>
+        
+        
+	    <!-- 主体部分(middle) -->
+		<div class="middle">
+		   <!-- 筛选表单栏 -->
+           <div class="screenFormFence">
+               <!-- 地点筛选项 -->
+               <div class="selectByAddress select">
+                    <ul style="padding-left: 0px">
+                        <li class="line1">
+                           <b style="font-weight: normal;">地点:</b>
+                           <a href="">全部</a>
+                           <a href="">北京</a>
+                           <a href="">上海</a>
+                           <a href="">深圳</a>
+                           <a href="">广州</a>
+                           <a href="">长沙</a>
+                           <a href="">三亚</a>
+                           <a href="">石家庄</a>
+                           <span class="more_button">更多></span>
+                        </li>
+                        <li class="line2">
+                            
+                        </li>
+                    </ul>
+               </div>
+               <!-- 月份筛选项 -->
+               <div class="selectByMonth select">
+                   <ul style="padding-left: 0px">
+                        <li class="line1">
+                           <b style="font-weight: normal;">月份:</b>
+                           <a href="">全部</a>
+                           <a href="">1月</a>
+                            <a href="">2月</a>
+                            <a href="">3月</a>
+                            <a href="">4月</a>
+                            <a href="">5月</a>
+                            <a href="">6月</a>
+                            <a href="">7月</a>
+                            <a href="">8月</a>
+                            <a href="">9月</a>
+                            <a href="">10月</a>
+                            <a href="">11月</a>
+                            <a href="">12月</a>
+                            <a href="">13月</a>
+                        </li>
+                        <li class="line2">
+                        </li>
+                    </ul>
+               </div>
+               <!-- 天数筛选项 -->
+               <div class="selectByDays select">
+                    <ul style="padding-left: 0px">
+	                    <li class="line1">
+	                        <b style="font-weight: normal;">天数:</b>
+	                        <a href="">全部</a>
+		                    <a href="">1-2天</a>
+		                    <a href="">3-4天</a>
+		                    <a href="">5-6天</a>
+		                    <a href="">7-8天</a>
+		                    <a href="">9天以上</a>
+	                    </li>
+                    </ul>
+               </div>
+               <!-- 人物筛选项 -->
+               <div class="selectByMan select">
+                    <ul style="padding-left: 0px">
+	                    <li class="line1">
+	                        <b style="font-weight: normal;">人物:</b>
+	                        <a href="">全部</a>
+	                        <a href="">独自旅行</a>
+	                        <a href="">三五好友</a>
+	                        <a href="">情侣二人</a>
+	                        <a href="">家庭旅游</a>
+	                        <a href="">死党闺蜜</a>
+	                        <a href="">其他</a>
+	                    </li>
+                    </ul>
+               </div>
+               <!-- 花费筛选项 -->
+               <div class="selectByPay select">
+                    <ul class="pay" style="padding-left: 0px">
+                        <li class="line1">
+                            <b style="font-weight: normal;">花费:</b>
+                            <a href="">全部</a>
+                            <a href="">1-499</a>
+                            <a href="">500-999</a>
+                            <a href="">1000-1999</a>
+                            <a href="">2000-3999</a>
+                            <a href="">4000-6999</a>
+                            <a href="">7000以上</a>
+                            <span class="more_button" onclick="openPayLine2(this);">更多></span>
+                        </li>
+                        <li class="line2" style="display: none">
+                            <div style="font-size: 20px">
+                                <form action="">
+	                                <input type="text" name="money_mine"
+	                                   class="input_money_mine input_money"/>
+	                                ~
+	                                <input type="text" name="money_max"
+	                                    class="input_money_max input_money"/>
+	                                <input type="submit" class="comfirm" value="确定">
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+               </div>
+               
+           </div>
+		
+		   <!-- 选择排序行 --> 
+		   <div class="selectRank">
+		      <a href="">热门游记</a>
+		      <a href="">最新发表</a>
+		   </div>
+		  
+		   <!-- 展示模块 -->
+	       <ul class="showArea">
+		      <!-- 游记 -->
+		      <li class="travelNotes">
+		          <a class="left" style="background-image: url(iconFiles/user_Icon.jpg)"
+		              href=""></a>
+		          <div class="right">
+		               <!-- 第一行标题 -->
+			           <span class="title">
+	                       <a>巴黎岛自由行完全攻略:从出行到游玩体验</a>
+	                   </span>
+	                   <br>
+		               <!-- 第二行简要信息 -->
+		               <span class="line2">
+		                   <span class="line2_left">
+			                    <!-- 用户昵称 -->
+			                    <a class="userName" href="">黄振</a>
+			                    <b>|</b>
+			                    <!-- 行程信息 -->
+			                    2020-01-01出发
+			                    <b>|</b>
+			                                           共5天
+			                    <b>|</b>
+			                                           人均8000元
+		                   </span>
+		                    <!-- 右侧点赞 -->
+		                    <span class="line2_right">
+		                       <img  src="iconFiles/is_love.png">
+		                       <b>666</b>
+		                    </span>                     
+		                </span>
+		                <!-- 第三行关键字 -->
+		                <span class="keywords">
+		                                             行程<b class="arrow">:</b>
+	                                                      索菲亚广场<b class="arrow">></b>中央大街<b class="arrow">></b>北红村
+		                </span>
+		                <!-- 第四行图片 -->
+		                <span>
+			                <a class="travelPicture">
+			                    <img src="picture/1.jpg">
+			                </a>
+			                <a class="travelPicture">
+			                    <img src="picture/2.jpg">
+			                </a>
+			                <a class="travelPicture">
+			                    <img src="picture/3.jpg">
+			                </a>
+			                <a class="travelPicture">
+			                    <img src="picture/4.jpg">
+			                </a>
+		                </span>
+	                </div>
+		         </li>
+	          </ul>
+
+		</div>
+		
+	<!-- 尾部分(footer) -->
+		<div class="footer" id="footer">
+		
+		</div>
+		
+	</body>
+</html>
