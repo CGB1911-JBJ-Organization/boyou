@@ -1,11 +1,5 @@
-/**
- * Coder: EzrealY
- * Time: 2017.07.31
- * Mail: 1005526074@qq.com
- * 效果原作者: https://oss.so/article/71
- */
- 
-;(function ($, window, document, undefined) {
+
+ (function ($, window, document, undefined) {
 
   var Shutter = function (elem, options) {
     this.defaults = {
