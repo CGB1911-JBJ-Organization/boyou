@@ -1,4 +1,36 @@
 @charset "UTF-8";
+/* -------------------搜索栏-------------------- */
+.searchFence {
+    /* background:gray; */
+    margin: 5px auto;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:10px;
+    width: 700px;
+    height: 50px;
+}
+.searchFence .input_keyword {
+    background: #ffffff;
+    width: 600px;
+    height: 40px;
+    font-size: 100%;
+    font-family:"宋体";
+    float: left;
+    border: 1px solid #747474;
+    border-right:none;
+}
+.searchFence .do_search {
+    height: 44px;
+    width: 50px;
+    float: left;
+    background-image: url(/dist/img/TravelSquare/iconFiles/search.jpg);
+    background-size:cover;
+    border: 1px solid #747474;
+    border-left:none;
+}
+/* -------------------搜索栏-------------------- */
+
+
 /* 主体部分(middle) */
 .middle{ 
     /* background: gray; */
