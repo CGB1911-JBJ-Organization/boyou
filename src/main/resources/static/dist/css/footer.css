@@ -2,19 +2,23 @@
 /* 尾部分(footer) */
 .footer{ 
     /* background: #ffff80; */
-    width: 1000px;
-    margin:20px auto;
+    width: 100%;
+    margin-top: 60px;
+}
+.footer .middle{
+	width: 1000px;
+	margin:20px auto;
     font-size: 13.333px;
     font-family: "Arial";
     color: #999999;
     padding-top: 60px;
 }
-.footer a{
+.footer .middle a{
 	text-decoration: none;
 	color: #999999;
 	margin: 0px 6px;
 }
-.footer span{
+.footer .middle span{
 	display: inline-block;
 	width:100%;
 	text-align: center;
