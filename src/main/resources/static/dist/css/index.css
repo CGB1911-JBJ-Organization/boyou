@@ -1,5 +1,8 @@
 @CHARSET "UTF-8";
 
+body .bigest{
+}
+
 body .left-body {
 	width: 50px;
 	height: 1200px;
@@ -149,7 +152,7 @@ body .panel-body {
 
 .panel-body .rm {
 	width: 350px;
-	height: 1000px;
+	height: 1800px;
 	background: #00bcd412;
 	margin-left: 30px;
 	float: left;
@@ -171,7 +174,7 @@ body .panel-body {
 	width: 300px;
 	height: 1000px;
 	margin-left: 20px;
-	float: left; 
+	float: left;
 }
 
 .panel-body .rm .bd {
@@ -203,11 +206,13 @@ em {
 	float: left;
 }
 /* 热卖标签*/
-/* .remai {
+ .remai {
 	font-size: 24px;
 	color: red;
-} */
+} 
 
 a {
 	text-decoration: none;
 }
+
+
