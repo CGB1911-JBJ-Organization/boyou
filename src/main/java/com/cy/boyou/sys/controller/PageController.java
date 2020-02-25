@@ -18,7 +18,7 @@ public class PageController {
 	 */
 	@RequestMapping("boyou")
 	public String startPage() {
-		return "";
+		return "boyou-index";
 	}
 	
 	/**

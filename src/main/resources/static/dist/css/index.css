@@ -72,7 +72,7 @@ body .panel-body {
 .panel-body .lanmu1 .ss {
 	width: 72px;
 	height: 48px;
-	background-image: url("image_index/ss.png");
+	background-image: url("/dist/img/image_index/ss.png");
 	margin-left: 15px;
 	vertical-align: middle;
 }
@@ -87,7 +87,7 @@ body .panel-body {
 	width: 90px;
 	height: 40px;
 	vertical-align: middle;
-	background-image: url("image_index/kefu.png");
+	background-image: url("/dist/img/image_index/kefu.png");
 }
 
 /* 轮播图 */
@@ -203,10 +203,10 @@ em {
 	float: left;
 }
 /* 热卖标签*/
-.remai {
+/* .remai {
 	font-size: 24px;
 	color: red;
-}
+} */
 
 a {
 	text-decoration: none;
