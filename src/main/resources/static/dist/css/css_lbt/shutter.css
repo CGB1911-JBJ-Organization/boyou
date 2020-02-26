@@ -58,12 +58,12 @@ ul, li { list-style: none; }
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 36px;
+  height: 46px;
   background: url(/dist/img/img_index_lbt/shutter_shadow.png) repeat;
 }
 .shutter-desc p {
   padding-left: 20px;
   line-height: 36px;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
 }
