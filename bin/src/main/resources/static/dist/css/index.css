@@ -1,0 +1,218 @@
+@CHARSET "UTF-8";
+
+body .bigest{
+}
+
+body .left-body {
+	width: 50px;
+	height: 1200px;
+	background: #9e9e9e45;
+	float: left;
+}
+/* 左侧边栏的元素样式设计 */
+.left-body  .yhm-up {
+	margin: 150px;
+}
+
+body .panel-body {
+	width: 97%;
+	height: 1200px;
+}
+
+.panel-body .up {
+	width: 70%;
+	height: 40px;
+	font-size: 14px;
+	margin: 0 50px 0 auto;
+}
+
+.panel-body .up li {
+	float: right;
+	list-style: none;
+	margin: 10px;
+}
+
+.panel-body .up li  .in {
+	color: #00bcd4;
+}
+
+.panel-body .lanmu1 {
+	margin: 0 100px;
+}
+
+/* 导航栏元素样式 */
+.panel-body .fenge {
+	width: 100%;
+	height: 60px;
+	background: #00bcd4;
+	margin-left: 4%;
+}
+
+.panel-body .fenge .daohanglan {
+	display: inline-block;
+	padding-top: 15px;
+	margin-left: 400px;
+}
+
+.panel-body .fenge .daohanglan  a {
+	font-size: 20px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+	margin: 0px 15px;
+	height: 25px;
+}
+
+.panel-body .logo {
+	width: 18%;
+	height: 100px;
+	margin-left: 140px;
+	vertical-align: middle;
+	float: left;
+}
+
+.panel-body .lanmu1 .ss {
+	width: 72px;
+	height: 48px;
+	background-image: url("/dist/img/image_index/ss.png");
+	margin-left: 15px;
+	vertical-align: middle;
+}
+
+.panel-body .lanmu1 .tq {
+	width: 300px;
+	height: 80px;
+	vertical-align: middle;
+}
+
+.panel-body .lanmu1 .kf {
+	width: 90px;
+	height: 40px;
+	vertical-align: middle;
+	background-image: url("/dist/img/image_index/kefu.png");
+}
+
+/* 轮播图 */
+.panel-body .lbt {
+	width: 95%;
+	height: 300px;
+	margin: 0 auto;
+}
+
+.code, #effects-select {
+	display: inline-block;
+}
+
+#effects-select {
+	padding: .4em;
+	margin-right: 1em;
+	font-size: 14px;
+	border: 1px solid #aaa;
+}
+
+/* .title {
+	padding: 1em 0;
+	position: relative;
+} */
+
+.slider-wrap {
+	background: white;
+	padding: 10px;
+	height: 440px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+}
+
+.slider {
+	margin-left: 18.75rem;
+	width: 80%;
+	height: 240px;
+}
+
+.slider strong {
+	color: #F0E10E;
+}
+
+.action {
+	position: absolute;
+	right: 0;
+	top: 13px;
+	color: white;
+	background: black;
+	border: 0;
+	width: 80px;
+	padding: .6em 0;
+}
+
+.stop {
+	display: none;
+	background: #088BBF;
+	text-shadow: 1px 1px rgba(0, 0, 0, .4)
+}
+
+.panel-body .rm {
+	width: 350px;
+	height: 1800px;
+	background: #00bcd412;
+	margin-left: 30px;
+	float: left;
+}
+
+.panel-body .tj {
+	width: 1000px;
+	height: 1000px;
+	margin-left: 20px;
+	float: left;
+}
+
+.panel-body .tj .k1, .k2, .k4, .k5, .k7, .k8 {
+	float: left;
+	margin-right: 80px;
+}
+/* ----------攻略样式设计---------- */
+.panel-body .gl {
+	width: 300px;
+	height: 1000px;
+	margin-left: 20px;
+	float: left;
+}
+
+.panel-body .rm .bd {
+	margin: 0 20px;
+}
+
+.you {
+	color: black;
+	font-size: 24px;
+}
+/*下面是关于价格标签的样式设置 */
+.wangfang {
+	font-size: 28px;
+	float: left;
+}
+
+.discount {
+	color: red;
+	font-size: 19px;
+	float: left;
+}
+
+em {
+	color: red;
+	font-size: 20px;
+}
+/* 交通相关 */
+.zhuxing {
+	float: left;
+}
+/* 热卖标签*/
+ .remai {
+	font-size: 24px;
+	color: red;
+} 
+
+a {
+	text-decoration: none;
+}
+
+
