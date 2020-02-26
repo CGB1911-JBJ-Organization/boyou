@@ -1,9 +1,6 @@
-/**
- * Coder: EzrealY
- * Time: 2017.07.31
- * Mail: 1005526074@qq.com
- * 效果原作者: https://oss.so/article/71
- */
+$(function(){
+	$("#footer").load("/doPageModule/footer");
+})
  
 ;(function ($, window, document, undefined) {
 
