@@ -11,6 +11,8 @@ import com.cy.boyou.sys.dao.NoteDao;
 import com.cy.boyou.sys.entity.Note;
 import com.cy.boyou.sys.service.NoteService;
 
+import io.micrometer.core.instrument.util.StringUtils;
+
 
 
 
@@ -27,6 +29,21 @@ public class NoteServiceImpl implements NoteService {
 		Map<String,Object> map=new HashMap<>();
 		map.put("note", note);
 		return map;
+	}
+
+	@Override
+	public int deleteNoteInPage(Integer id,Integer user) {
+		//1.合法性验证
+		if(id==null||id<=0)
+		System.out.println("参数不合法,id="+id);
+		if(user==null||user<=0)
+		System.out.println("请登录");
+		//2.执行禁用或启用操作
+		int rows=noteDao.deleteNoteInPage(id, user);
+		//3.判定结果,并返回
+		if(rows==0)
+		System.out.println("此游记可能已经不存在");
+		return rows;
 	}
 
 }

@@ -34,7 +34,7 @@ public interface NoteDao {
 	   * @param ids
 	   * @return
 	   */
-	  int deleteNoteInPage(Integer id);
+	  int deleteNoteInPage(Integer id,Integer user);
 	
      /**
       * 按条件统计游记记录总数

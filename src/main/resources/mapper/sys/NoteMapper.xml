@@ -9,22 +9,11 @@
 		where notesId=#{id}
 	</select>
 	
-	<delete id="deleteObjects">
-            delete from notes_user
-            <choose>
-                <when test="ids!=null and ids.length>0">
-                   <where>
-                       <foreach collection="ids" separator="or" item="id">
-                            notesId=#{id}
-                       </foreach>
-                   </where>
-                </when>
-                <otherwise>
-                      where 1==2
-                </otherwise>
-            </choose>
-      
-      </delete>
+	<update id="deleteNoteInPage">
+       update notes_user
+       set noteStatus=0,
+       where notesId=#{id} and userId=#
+   </update>
   
 
       
