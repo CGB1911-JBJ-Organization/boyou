@@ -4,7 +4,7 @@
 /*==============================================================*/
 
 /*数据库名:boyou*/
-CREATE DATABASE IF NOT EXISTS`boyou`  DEFAULT CHARACTER SET utf8;
+CREATE DATABASE IF NOT EXISTS `boyou`  DEFAULT CHARACTER SET utf8;
 USE `boyou`;
 
 /*用户权限表*/
@@ -50,6 +50,7 @@ DROP TABLE IF EXISTS `notes_user`;
 CREATE TABLE `notes_user` (
   `notesId` int(11) NOT NULL AUTO_INCREMENT,
   `userId` int(10) COMMENT '用户id',
+  `noteStatus` int(10) COMMENT '游记状态 0是不感兴趣',
   `noteText` varchar(1000) DEFAULT NULL COMMENT '游记文本',
    `noteImage` varchar(200)DEFAULT NULL COMMENT '图片地址',
    `noteTime` datetime DEFAULT NULL COMMENT '游记发生时间',
@@ -72,16 +73,16 @@ CREATE TABLE `tickets` (
   PRIMARY KEY (`tickets_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-insert  into `notes_user`values (1,100,'很开心','/img/558k',NULL,'美洲',NULL,NULL,'梨花'),
-(null,200,'还不错','/img/558k',NULL,'俄罗斯',NULL,NULL,'梨花'),
-(null,300,'很好','/img/ahk',NULL,'加州',NULL,NULL,'gh'),
-(null,400,'很开心','/img/533',NULL,'鸿管',NULL,NULL,'梨花'),
-(null,500,'很开心','/img/5454k',NULL,'予以',NULL,NULL,'梨花'),
-(null,600,'很开心','/img/5548k',NULL,'美洲',NULL,NULL,'fhf'),
-(null,700,'很开心','/img/asdak',NULL,'美洲',NULL,NULL,'梨fd'),
-(null,800,'很开心','/img/dasd8k',NULL,'美洲',NULL,NULL,'梨花'),
-(null,900,'很开心','/img/gsdfg8k',NULL,'美洲',NULL,NULL,'2131花'),
-(null,1000,'很开心','/img/sdfg8k',NULL,'美洲',NULL,NULL,'梨花'),
-(null,1100,'很开心','/img/7748k',NULL,'美洲',NULL,NULL,'梨花');
+insert  into `notes_user`values (1,100,1,'很开心','/img/558k',NULL,'美洲',NULL,NULL,'梨花'),
+(null,200,1,'还不错','/img/558k',NULL,'俄罗斯',NULL,NULL,'梨花'),
+(null,300,1,'很好','/img/ahk',NULL,'加州',NULL,NULL,'gh'),
+(null,400,1,'很开心','/img/533',NULL,'鸿管',NULL,NULL,'梨花'),
+(null,500,1,'很开心','/img/5454k',NULL,'予以',NULL,NULL,'梨花'),
+(null,600,1,'很开心','/img/5548k',NULL,'美洲',NULL,NULL,'fhf'),
+(null,700,0,'很开心','/img/asdak',NULL,'美洲',NULL,NULL,'梨fd'),
+(null,800,0,'很开心','/img/dasd8k',NULL,'美洲',NULL,NULL,'梨花'),
+(null,900,1,'很开心','/img/gsdfg8k',NULL,'美洲',NULL,NULL,'2131花'),
+(null,1000,1,'很开心','/img/sdfg8k',NULL,'美洲',NULL,NULL,'梨花'),
+(null,1100,0,'很开心','/img/7748k',NULL,'美洲',NULL,NULL,'梨花');
 
 
