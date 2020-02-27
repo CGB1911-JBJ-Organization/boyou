@@ -26,7 +26,7 @@ public class PageController {
 	 * @param pageName 页面名称
 	 * @return 页面路径
 	 */
-	@RequestMapping("doPageUi/{pageName}")
+	@RequestMapping("doPageUI/{pageName}")
 	public String doPageUi(@PathVariable String pageName) {
 		return "sys/"+pageName;
 	}

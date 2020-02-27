@@ -42,9 +42,10 @@ public class SpringShiroConfig {
 	  		 map.put("/bower_components/**","anon");
 	  		 map.put("/build/**","anon");
 	  		 map.put("/dist/**","anon");
-	  		 map.put("/templates/boyou-index","anon");
+	  		 //怎么设置页面
+
 	  		 //除了匿名访问的资源,其它都要认证("authc")后访问
-	  		 map.put("/**","authc");
+		     map.put("/**","authc");
 	  		 sfBean.setFilterChainDefinitionMap(map);
 	  		 return sfBean;
 	  	 }
