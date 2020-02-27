@@ -1,5 +1,5 @@
 package com.cy.boyou.sys.dao;
 
-public interface dao {
+public interface travelNotesDao {
 
 }
