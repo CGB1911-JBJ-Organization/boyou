@@ -48,16 +48,16 @@ CREATE TABLE `travel_attractions` (
 /*用户id,游记名,时间,地点,详情,类型,图片,*/
 DROP TABLE IF EXISTS `notes_user`;
 CREATE TABLE `notes_user` (
-  `notes_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(10) COMMENT '用户id',
-  `note_text` varchar(1000) DEFAULT NULL COMMENT '游记文本',
-   `note_image` varchar(200)DEFAULT NULL COMMENT '图片地址',
-   `note_time` datetime DEFAULT NULL COMMENT '游记发生时间',
-   `note_addr` varchar(20) DEFAULT NULL COMMENT '游记发生地点',
-  `create_time` datetime DEFAULT NULL COMMENT '游记创建时间',
-  `modified_time` datetime DEFAULT NULL COMMENT '游记修改时间',
-  `created_user` varchar(20) DEFAULT NULL COMMENT '创建游记用户',
-  PRIMARY KEY (`notes_id`)
+  `notesId` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` int(10) COMMENT '用户id',
+  `noteText` varchar(1000) DEFAULT NULL COMMENT '游记文本',
+   `noteImage` varchar(200)DEFAULT NULL COMMENT '图片地址',
+   `noteTime` datetime DEFAULT NULL COMMENT '游记发生时间',
+   `noteAddr` varchar(20) DEFAULT NULL COMMENT '游记发生地点',
+  `createTime` datetime DEFAULT NULL COMMENT '游记创建时间',
+  `modifiedTime` datetime DEFAULT NULL COMMENT '游记修改时间',
+  `createdUser` varchar(20) DEFAULT NULL COMMENT '创建游记用户',
+  PRIMARY KEY (`notesId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 /*门票表 tickets */
@@ -71,4 +71,17 @@ CREATE TABLE `tickets` (
    `attractions_id` int(20) DEFAULT NULL COMMENT '景区ID',
   PRIMARY KEY (`tickets_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+insert  into `notes_user`values (1,100,'很开心','/img/558k',NULL,'美洲',NULL,NULL,'梨花'),
+(null,200,'还不错','/img/558k',NULL,'俄罗斯',NULL,NULL,'梨花'),
+(null,300,'很好','/img/ahk',NULL,'加州',NULL,NULL,'gh'),
+(null,400,'很开心','/img/533',NULL,'鸿管',NULL,NULL,'梨花'),
+(null,500,'很开心','/img/5454k',NULL,'予以',NULL,NULL,'梨花'),
+(null,600,'很开心','/img/5548k',NULL,'美洲',NULL,NULL,'fhf'),
+(null,700,'很开心','/img/asdak',NULL,'美洲',NULL,NULL,'梨fd'),
+(null,800,'很开心','/img/dasd8k',NULL,'美洲',NULL,NULL,'梨花'),
+(null,900,'很开心','/img/gsdfg8k',NULL,'美洲',NULL,NULL,'2131花'),
+(null,1000,'很开心','/img/sdfg8k',NULL,'美洲',NULL,NULL,'梨花'),
+(null,1100,'很开心','/img/7748k',NULL,'美洲',NULL,NULL,'梨花');
+
 

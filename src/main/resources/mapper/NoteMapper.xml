@@ -3,10 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="com.cy.boyou.sys.dao.NoteDao">
-      <select id="findNoteById" parameterType="com.cy.boyou.sys.entity.Note">
+      <select id="findNoteById" resultType="com.cy.boyou.sys.entity.Note">
 		select *
 		from notes_user
-		where id=#{id}
+		where notesId=#{id}
 	</select>
   
 

@@ -22,7 +22,7 @@ public interface NoteDao {
 	 * @param id
 	 * @return
 	 */
-	User findNoteById(Integer id);
+	Note findNoteById(Integer id);
 	/**
 	 * 写入游记信息
 	 * @param entity
