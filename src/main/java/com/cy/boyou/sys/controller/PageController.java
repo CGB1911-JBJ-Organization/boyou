@@ -40,4 +40,14 @@ public class PageController {
 	public String doPageMudule(@PathVariable String module) {
 		return "common/"+module;
 	}
+	
+	/**
+	 * 此方法响应后台
+	 * @param moduleUI
+	 * @return
+	 */
+	@RequestMapping("doManageUI/{moduleUI}")
+	public String doManageUI(@PathVariable String moduleUI) {
+		return "zzj/"+moduleUI;
+	}
 }

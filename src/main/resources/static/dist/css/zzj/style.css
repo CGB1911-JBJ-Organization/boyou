@@ -1,0 +1,40 @@
+* {
+	margin:0;
+	padding:0;
+	
+}
+
+body{
+	font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+	font-size: 14px;
+	color: #333;
+	text-decoration: none;
+	text-align: center;
+	list-style-type: none;
+	background-image: url(/dist/img/zzj/bg.png);
+	background-repeat: repeat; 
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;	/* Firefox */
+    -webkit-box-sizing:border-box;	/* Safari */
+	-webkit-overflow-scrolling: touch;
+}
+a{
+	color:#333; cursor: pointer;
+	text-decoration: none;
+	outline:none;
+}
+a img{border: none;}
+img:hover{ opacity:0.9;}
+li{list-style-type: none;}
+button{cursor: pointer;}
+input{ vertical-align:middle; outline:none;}
+textarea{ vertical-align:middle; outline:none;}
+select{ vertical-align:middle; outline:none;}
+
+strong{ font-weight:normal;}
+p{ text-indent:2em; text-align: left;}
+.all{ width:100%;}
+.clear{ clear:both;} 
+
+
+input,button,a {outline:0 none !important; blr:expression(this.onFocus=this.blur());} 
