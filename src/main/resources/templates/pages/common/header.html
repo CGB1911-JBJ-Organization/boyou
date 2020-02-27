@@ -6,14 +6,24 @@ $(function(){
 	$("#footer").load("/doPageModule/footer");
 })
 -->
-
-	<div class="line1">
+<header id="header">
+	<div  class="line1">
 	   <!-- 最上层,登录,注册,消息,订单,积分商城,联系客服 -->
 	   <li><a>联系客服</a></li>
 	   <li><a>积分商城</a></li>
 	   <li><a>订单</a></li>
 	   <li><a>消息</a></li>
-	   <li>请<a class="in" href="/doPageUi/index">登录</a>或<a class="in" href="/doPageUi/index">免费注册</a></li>
+	   <c:if test="${empty user}">
+	  		<li>请<a class="in" href="/doPageUi/index">登录</a>或
+	   		<a class="in" href="/doPageUi/index">免费注册</a>
+	   		</li>
+		</c:if>		
+		<c:if test="${!empty user}">
+			<li><a class="ining" href="#">${user.name}</a></li>
+			<li><a class="ining" href="#">退出</a></li>
+		</c:if>	
+	
+	
 	</div>
 	<div class="line2">
 		<!-- logo -->
@@ -32,6 +42,6 @@ $(function(){
 	         <a href="/doPageUi/travelSquare">游记</a>
 	     </div>
 	</div>
-	
+</header>
 <!-- </div> -->
 <link rel="stylesheet" type="text/css" href="/dist/css/header.css">
