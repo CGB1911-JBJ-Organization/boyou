@@ -50,4 +50,13 @@ public class PageController {
 	public String doManageUI(@PathVariable String moduleUI) {
 		return "zzj/"+moduleUI;
 	}
+	
+	/**
+	 * 此方法响应加载登录界面
+	 * @return
+	 */
+	@RequestMapping("doLoginUI/{pageName}")
+	public String doLoginUI(@PathVariable String pageName){
+			return "sys/"+pageName;
+	}
 }
