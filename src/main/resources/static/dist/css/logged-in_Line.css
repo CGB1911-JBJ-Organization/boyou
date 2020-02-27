@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.header{/* div */
+   /*  background: #c0c0c0; */
+    width: 100%;
+}
+.header .line1 {/* div */
+	/* background:aqua; */
+	font-size: 15px;
+	width: 1000px;
+	height: 45px;
+	margin: 0px auto;
+	line-height: 45px;
+}
+.header .line1 li{
+    float:right;
+    list-style:none;
+    margin:2px 10px;
+}
+
+.header .line1 .user_Icon{
+	background-image: url(/dist/img/TravelSquare/iconFiles/user_Icon.jpg);
+	background-size:cover;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+}

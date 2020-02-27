@@ -20,10 +20,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //web font -->
 
 <script type="text/javascript" src="/bower_components/jquery-1.8.3.js"></script>
-<script type="text/javascript" src="/dist/js/travelSquare.js"></script>
-<link href="/dist/css/travelNotes/travelSquare.css" rel="stylesheet" type="text/css"/>
-<link href="/dist/css/travelNotes/selectFrom.css" rel="stylesheet" type="text/css"/>
-
 <!-- js -->
 <script src="/dist/js/user/jquery.min.js"></script>
 <script src="/dist/js/user/easyResponsiveTabs.js" type="text/javascript"></script>
@@ -35,7 +31,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				//fit: true   // 100% fit in a container
 			});
 		});
-	   </script>
+		$(function(){
+			$("#header").load("/doPageModule/header");
+			$("#footer").load("/doPageModule/footer");
+		})
+	</script>
 <!-- //js -->
 </head>
 <body>
