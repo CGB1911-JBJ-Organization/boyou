@@ -60,6 +60,13 @@
 	margin: 30px 20px 0px 0px;
 }
 
+/*--------------------浮动模块---------------------------------------*/
+.floatModule {
+	/* background-color:gray; */
+	position: fixed;
+	width: 100%;
+	top: 415px;
+}
 
 /*--------------- 游记列表----------------------------------------------- */
 .middle .showArea {/* ul */
@@ -155,3 +162,26 @@
 
 
 /*-----------------------------------------------------------------------*/
+
+
+.floatModule .location {/*定位div*/
+	/* background-color:green; */
+	width: 1200px;
+	height:80px;
+	margin: 0  auto;
+}
+.floatModule .location .writeTravel {/*编写游记按钮*/
+	background-color: #5757ff;
+	width: 80px;
+	height: 80px;
+	line-height: 85px;
+	border-radius: 50%;
+	font-size: 26px;
+	text-align: center;
+	font-family: '华文行楷';
+	margin-left: 1050px;
+	float: left;
+	text-decoration: none;
+	color: white;
+}
+/*----------------------------------------------------------------------*/

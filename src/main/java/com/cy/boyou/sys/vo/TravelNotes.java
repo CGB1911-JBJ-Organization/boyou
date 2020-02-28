@@ -26,7 +26,6 @@ public class TravelNotes extends Travel implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -1348142498277345453L;
-	
 	private List<Note> notes;//游记内容
 
 }

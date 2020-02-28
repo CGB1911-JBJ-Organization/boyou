@@ -11,17 +11,15 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SpringShiroConfig {
-      /**
-       * 配置SecurityManager对象，此对象为shiro框架的核心。
-       * @Bean注解描述的方法的返回值要交给spring容器管理。
-       * 注意：SecurityManager包不要引错了
-       */
-	  @Bean //<bean id="" class="">
-	  public SecurityManager securityManager() {
-		  DefaultWebSecurityManager  sManager=
-		  new DefaultWebSecurityManager();
-		  return sManager;
-	  }
+	/**
+	 * 配置SecurityManager对象，此对象为shiro框架的核心。 @Bean注解描述的方法的返回值要交给spring容器管理。
+	 * 注意：SecurityManager包不要引错了
+	 */
+	@Bean // <bean id="" class="">
+	public SecurityManager securityManager() {
+		DefaultWebSecurityManager sManager = new DefaultWebSecurityManager();
+		return sManager;
+	}
 	  /**
 	   * 配置ShiroFilterFactoryBean对象，基于此对象创建过滤器工厂，
 	   * 通过过滤器工厂创建过滤器(filter)，通过过滤器对用户请求进行过滤。
@@ -44,17 +42,10 @@ public class SpringShiroConfig {
 	  		 
 	  		 //除了匿名访问的资源,其它都要认证("authc")后访问
 	  		  map.put("/doPageUI/homePages","authc"); 
-	  		  map.put("/doPageUI/add","authc"); 
+	  		  //map.put("/doPageUI/add","authc"); 
 	  		 sfBean.setFilterChainDefinitionMap(map);
 	  		 return sfBean;
 	  	 }
+     
 
-	  
 }
-
-
-
-
-
-
-

@@ -17,6 +17,8 @@ public class TravelNotesController {
 	
 	@RequestMapping("doInsertTravelNotes")
 	public JsonResult doInsertTravelNotes(TravelNotes entitys) {
+		System.out.println("测试游记");
+		System.out.println(entitys);
 		travelNotesService.insertTravelNotes(entitys);
 		return new JsonResult("保存成功");
 	}
