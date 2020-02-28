@@ -44,6 +44,7 @@ CREATE TABLE `travel_attractions` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
+
 /*游记表 user_travels  travel_notes*/
 /*用户id,游记名,时间,地点,详情,类型,图片,*/
 DROP TABLE IF EXISTS `user_travel`;
