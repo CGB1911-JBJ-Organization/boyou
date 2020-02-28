@@ -1,0 +1,97 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<title>快速登录_博游旅游网</title>
+<link rel="stylesheet" type="text/css" href="/style/green/css/common.css"/>
+</head>
+<body style="background: transparent;">
+	<div id="quickLogin" class="clearfix">
+             <div class="boxes clearfix">
+		<h1 class="hd"><span onclick="parent.HideWindow();" title="关闭" class="close">&nbsp;</span><b>快速登录</b></h1>
+		<div class="content clearfix">
+			<div class="signLeft">
+				<form action="" method="post" id="TourExForm" name="TourExForm">
+					<ul class="signs clearfix">
+						<li><label for="U_Name">会员账号：</label><input type="text"  name="U_Name" id="U_Name" placeholder="会员帐号/手机号/邮箱" class="inputText"><span id="box_U_Name"></span></li>
+						<li><label for="U_Pass">登录密码：</label><input name="PassTips" id="PassTips" type="text" class="inputText" placeholder="请输入密码" onfocus="$(this).remove();$('#U_Pass').show().focus();" /><input type="password" name="U_Pass" id="U_Pass" class="inputText" style="display: none;"><span id="box_U_Pass"></span></li>
+						<li id="ProofContainer" style="display:none"><label for="code">验 证 码：</label><input type="text" class="inputText inp2" name="Proof" id="Proof" onFocus="this.onfocus='';this.value='';get_Code('/');" placeholder="请输入验证码"><span id="imgid">获取验证码</span><span id="box_Proof"></span></li>
+						<li class="btn"><label for="">&nbsp;</label><input type="submit" class="inputBtn" value=" " /></li>
+						<li class="texts"><label for="">&nbsp;</label>忘记登录密码？<a href="http://www.uuwego.com/usercenter/forgetpwd.html" target="_top">找回密码</a></li>
+					</ul>
+				</form>
+			</div>
+			<div class="signRight">
+				<h2 class="title">还没有账号？立即注册</h2>
+				<ul class="applogin clearfix">
+					<li><a href="http://www.uuwego.com/usercenter/reg.html" target="_top" class="reg" title="会员注册">&nbsp;</a></li>
+				</ul>
+				<h2 class="title">使用合作网站帐号登录</h2>
+				<ul class="applogin clearfix">
+<li><a id="sina" href="javascript:void(0);" url="http://www.uuwego.com/sys/Login/Sina.aspx" class="sina" title="新浪微博">&nbsp;</a></li><li><a id="alipay" href="javascript:void(0);" url="http://www.uuwego.com/sys/Login/Ali.aspx/" class="alipay" title="支付宝">&nbsp;</a></li><li class="end"><a id="qq" href="javascript:void(0);" url="http://www.uuwego.com/sys/Login/QQ.aspx" class="qq" title="腾讯QQ">&nbsp;</a></li>                </ul>
+			</div>
+		</div>
+           </div>
+	</div>
+	<script type="text/javascript" src="/sys/js/jquery.js"> </script>
+	<script type="text/javascript" src="/sys/js/jquery.validate.js"> </script>
+	<script type="text/javascript" src="/sys/js/jquery.validate.check.js"> </script>
+	<script type="text/javascript">
+	$(function(){
+        $('#PassTips').focus(function(){
+            $('#PassTips').remove();$('#U_Pass').show();
+            $('#U_Pass').val('').focus();
+        });
+		$("#TourExForm").validate({
+			rules:{
+				U_Name:{required:function(){if($('#U_Name').val()=='会员帐号/手机号/邮箱')$('#U_Name').val('');return true;}},
+				U_Pass:{required:function()
+					{
+						if($('#PassTips').length!=0){$('#PassTips').remove();$('#U_Pass').show();}
+						if($('#U_Pass').val()=='请输入密码')$('#U_Pass').val('');
+						return true;
+					}},
+				Proof:{required:function(){if($('#Proof').val()=='请输入验证码')$('#Proof').val('');return true;},
+					remote:{url:'/sys/ajax/CheckProof.ashx',type:'get',dataType:'json',data:{'checktext':function(){return $('#Proof').val();}},cache:false}}
+				},
+			messages: {
+				U_Name:{required:'请填写用户名'},
+				U_Pass:{required:'请填写密码'},
+				Proof:{required:'请填写验证码!',remote:function(){get_Code('/');return '验证码错误!'}}
+			},submitHandler:function(form){
+var c='&callback=?';
+				$.getJSON('http://www.uuwego.com/sys/ajax/user/login.ashx?u_name='+escape($('#U_Name').val())+'&U_Pass='+$('#U_Pass').val() +c, function(data){
+				  if(data.err==''){
+							$.get('/sys/login/Uc.aspx');
+							parent.AlertLoginReturn(data);
+						}else{
+							alert(data.err);
+						}
+				});
+			}
+		}); 
+		if(0<0)
+		{
+			$('#Proof').rules('remove');
+			$('#ProofContainer').remove();
+		}else{
+			$('#ProofContainer').show();
+		}
+        //支付宝按钮
+        $("#alipay").unbind('click').removeAttr('onclick').click(function () {
+            window.open ($("#alipay").attr("url")+'?url='+escape(window.parent.document.location.href), 'newwindow', 'height=600, width=800, top=300, left=300, toolbar=no, menubar=no, scrollbars=no, resizable=yes,location=no, status=no')
+        });
+        //qq按钮
+        $("#qq").unbind('click').removeAttr('onclick').click(function () {
+           window.open ($("#qq").attr("url")+'?url='+escape(window.parent.document.location.href), 'newwindow', 'height=600, width=800, top=300, left=300, toolbar=no, menubar=no, scrollbars=no, resizable=yes,location=no, status=no')
+        });
+        //新浪微博
+        $("#sina").unbind('click').removeAttr('onclick').click(function () {
+            window.open ($("#sina").attr("url")+'?url='+escape(window.parent.document.location.href), 'newwindow', 'height=600, width=800, top=300, left=300, toolbar=no, menubar=no, scrollbars=no, resizable=yes,location=no, status=no')
+        });
+	});
+	</script>
+</body>
+</html>
