@@ -24,7 +24,7 @@ public class PageController {
 		return "sys/"+moduleUI;
 	}
 
-=======
+
 	/**
 	 * 此方法用于响应网站首页
 	 * @return 首页路径
@@ -54,5 +54,4 @@ public class PageController {
 		return "common/"+module;
 	}
 	
->>>>>>> branch 'master' of https://github.com/CGB1911-JBJ-Organization/boyou.git
 }
