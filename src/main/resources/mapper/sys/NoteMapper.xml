@@ -4,11 +4,6 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.cy.boyou.sys.dao.NoteDao">
-		<select id="findNoteById" resultType="com.cy.boyou.sys.entity.Note">
-			select *
-			from travel_notes
-			where notesId=#{notesId}
-		</select>
 		
 		<insert id="insertNote" parameterType="com.cy.boyou.sys.entity.Note">
 			insert into travel_notes
@@ -43,5 +38,4 @@
 		      where notesId=#{id}
 	 	 </update>
   
-
 </mapper>

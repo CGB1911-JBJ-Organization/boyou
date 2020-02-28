@@ -58,6 +58,4 @@ public interface NoteDao {
 	  List<Note> findPageObjects(String username,Integer startIndex,Integer pageSize); //limit startIndex,pageSize
 
 
-
-
 }
