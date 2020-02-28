@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- 
+	1.此页面为-登陆状态以后，网页头部需要变化。此为变化后的头部行
+	2.header.html可直接用line1加载。
+	3.其他不用加载header.html的网页，可自己写个
+			<div class="header" id="header">
+				<div class="line1">
+				</div>
+			</div>
+	容器来加载。
+	4.加载js代码参考-- $("#header .line1").load("/doPageModule/logged-in_Line");
+ -->
+
+<script type="text/javascript">
+	$(function(){
+		$("#header .line1 .user_Icon").click(function(){
+			window.location.href="/doPageUi/homePages";
+		});
+	});
+</script>
+
+<link rel="stylesheet" type="text/css" href="/dist/css/logged-in_Line.css">
+
+<li class="user_Icon"></li>
+<li><a href="">联系客服</a></li>
+<li><a href="">积分商城</a></li>
+<li><a href="">订单</a></li>
+<li><a href="">消息</a></li>
+<li><a class="startPage" href="/boyou">首页</a></li>

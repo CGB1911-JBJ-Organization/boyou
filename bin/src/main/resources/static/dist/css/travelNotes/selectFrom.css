@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+/* 此筛选表单,位于网页主体部位middle 
+*/
+
+/* 筛选表单栏 */
+.middle .screenFormFence{
+    background: #fff4ee;
+    display: inline-block;
+    width: 1000px;
+    /* height:200px; */
+    font-size: 16px;
+    margin: 5px auto; 
+}
+/* 除去li样式 */
+.middle .screenFormFence .select li{
+	list-style: none;
+	margin-left: 30px;
+}
+/* 标签去掉标签下划线设置字体颜色 */
+.middle .screenFormFence .select a{
+    text-decoration: none;
+    color: #0075ea;
+}
+/* 筛选项line1 */
+.middle  .screenFormFence .select .line1 a {
+	/* background:#ffff80; */
+	margin: 0px 10px;
+}
+/* '更多'按钮样式  */
+.middle  .screenFormFence .select .more_button {
+	display:inline-block;
+	border: none;
+	font-size: 16px;
+	float: right;
+	background: none;
+}
+
+.middle  .screenFormFence .selectByPay .line2 {
+	/* background: #ffff80; */
+	width: 400px;
+	height: 26px;
+	margin-left: 138px;
+}
+.middle  .screenFormFence .selectByPay .line2 .input_money {
+    width: 100px;
+    height: 20px;
+}
+.middle  .screenFormFence .selectByPay .comfirm {
+    background:white;
+    width: 40px;
+    height: 25px;
+    border: 1px solid #848484;
+    margin-top: 5px;
+}
+
+
+

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="/dist/js/user/jquery-3.4.1.min.js" ></script>
+		<link rel="stylesheet" href="/dist/css/user/publish.css" />
+		<script type="text/javascript" src="/bower_components/jquery-1.8.3.js"></script>
+	</head>
+	
+	
+	<body>
+		
+	
+		<div class="b_header_box">
+			<!-- 头部分(header) -->
+			<div class="header" id="header">
+				<div class="line1">
+				</div>
+			</div>
+			<div class="hd_picture">
+				<dl class="dropdown">
+					<input class="pic_upload_input" type="file" name="image" style="display: none;"/>
+					<dt class="dropdown_show"><a href=""><img src="/dist/img/add/3.png"/></a></dt>
+					<dd class="dropdown_dd dropdown_show"><a href="#">从游记选图片</a></dd>
+					<dd class="dropdown_dd dropdown_show"><a class="pic_upload" href="#">从本地上传</a></dd>
+				</dl>
+				<div class="text">图片建议选择尺寸大于1680px的高清大图，如相机原图</div>
+			</div>
+			<div class="b_hd">
+						<div class="e_avtar">
+							<img class="user_head" src="/dist/img/add/2.png"/>
+						</div>
+						<div class="e_hd_tit">
+							<input class="title_input" type="text" placeholder="为游记起一个拉轰的名字" maxlength="39">
+						</div>
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="mainbox">
+			<div class="b_note_wrap">
+					<div class="b_note_body">
+							<div class="e_day">
+								<div class="e_day_hd">
+									<div class="day_title">
+										<div class="text">第一天</div>
+										<div class="edit">
+											<a href="#"><img src="/dist/img/add/4.png"/></a>
+											<a href="#"><img src="/dist/img/add/5.png"/></a>
+										</div>
+									</div>
+									<div class="clear"></div>
+									<div class="ady_adds">
+										<div class="slide-adds add_show"><a href="#"><img src="/dist/img/add/6.png"/></a></div>
+										<ul class="add_show">
+											<li>
+												<a href="#">
+													<img src="/dist/img/add/8.png" />
+													<span>添加目录/天</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<img src="/dist/img/add/9.png" />
+													<i>添加地点</i>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<img src="/dist/img/add/10.png" />
+													<i>旅行经验</i>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="clear"></div>
+									
+									<div class="e_poi_ct">
+										<div class="top">
+											<div class="poi_city">
+												<input type="text" class="poi_tit_ipt" placeholder="添加游玩地点（非必填）"/>
+											</div>
+										</div>
+										<div class="bottom">
+											<div class="e_edit_box">
+												<input class="video_upload_input" type="file" name="image" style="display: none;"/>
+												<div class="e_video"><a href="" class="video_upload"><img src="/dist/img/add/11.png"/></a></div>
+												<textarea placeholder="为这次旅行写一段华丽丽的开篇吧:)"></textarea>
+											</div>
+										</div>
+									</div>
+									
+									<div class="ady_adds">
+										<div class="slide-adds add_show"><a href="#"><img src="/dist/img/add/6.png"/></a></div>
+										<ul class="add_show">
+											<li>
+												<a href="#">
+													<img src="/dist/img/add/8.png" />
+													<span>添加目录/天</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<img src="/dist/img/add/9.png" />
+													<i>添加地点</i>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<img src="/dist/img/add/10.png" />
+													<i>旅行经验</i>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+					</div>
+			</div>
+			<div class="photo_wall">
+				<div class="swfcontainer">
+					<a href="" class="pics_upload">上传本地照片</a>
+						<input class="pics_upload_input" type="file" style="display: none;"/>
+				</div>
+				<div class="sidebar-bd">
+					<div class="bd-title">
+						<h4>全部照片</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="clear"></div>
+		<div class="e_foot">
+			<div class="e_foot_box">
+				<div class="b_note_ft">
+					<a href="#"><img src="/dist/img/add/13.png"/></a>
+					<a href="#"><img src="/dist/img/add/14.png"/></a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 尾部分(footer) -->
+		<div class="footer" id="footer">
+		</div>
+
+	<script>
+		$(function(){
+			$("#footer").load("/doPageModule/footer",function(){});
+			$("#header .line1").load("/doPageModule/logged-in_Line");
+		})
+		$(".dropdown_show").hover(function(){
+			$(".dropdown_dd").show();
+		})
+		
+		$(".dropdown_show").mouseleave(function(){
+			$(".dropdown_dd").hide();
+		})
+		
+		$(".add_show").hover(function(){
+			$(".ady_adds ul").show();
+		})
+		
+		$(".add_show").mouseleave(function(){
+			$(".ady_adds ul").hide();
+		})
+		
+		$('.pic_upload').click(function() {
+		    $(".pic_upload_input").click();
+		})
+		
+		$('.video_upload').click(function() {
+		    $(".video_upload_input").click();
+		})
+		
+		$('.pics_upload').click(function() {
+		    $(".pics_upload_input").click();
+		})
+	</script>
+		</body>
+</html>

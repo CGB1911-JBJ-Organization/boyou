@@ -1,0 +1,210 @@
+@CHARSET "UTF-8";
+/* 头部分(header) */
+a { /* 全局a标签 */
+	text-decoration:none; /* 隐藏a标签 */
+}
+body a:hover{/* 在连接上悬停会产生效果 */
+	color:#ff0000; 
+}
+.header{/* div */
+   /*  background: #c0c0c0; */
+    width: 100%;
+    height:120px;
+    margin: 0px auto;
+    border-bottom: 2px solid #616161;
+    background-color: #c0c0c0;
+}
+.header .line1 {/* div */
+	/* background:aqua; */
+	font-size: 10px;
+	width: 1200px;
+	height: 20px;
+	margin: 0px auto;
+}
+.header .line1 li{
+    float:right;
+    list-style:none;
+    margin:2px 10px;
+}
+.header .line1 li .in{
+    color:#00bcd4;
+    font-size: 10px;
+}
+.header .line2 {
+	/* background:#ffff80; */
+	width: 1200px;
+	height: 70px;
+	margin: 0px auto;
+}
+.header .line2 .logo_box{
+	/* background:#80ff80; */
+	display: inline-block;
+	height: 70px;
+	width: 150px;
+	overflow: hidden;
+	float: left;
+}
+.header .line2 .logo_box img{
+	height: 70px;
+}
+.header .line2 .naviGationBar {
+/* 	background:#80ff00; */
+	display: inline-block;
+	padding-top: 45px;
+}
+.header .line2 .naviGationBar a{
+	font-size:20px;
+	font-family:"微软雅黑";
+	font-weight:bold;
+	color:black;
+    text-decoration: none;
+    margin: 0px 15px;
+    height: 25px;
+}
+
+/* ============================================ */
+.qn-header{
+    width: 100%;
+    height: 250px;
+	display:inline-block;
+   	
+}
+.qn-header .fla {
+    margin-top: 10px;
+    margin-left: 300px;
+	display:inline-block;
+	float: left;
+}
+
+.fla img{ /* 将图片设置为圆形 */
+    width: 118px;
+    height: 118px;
+    border: solid 6px #fff;
+    border-radius: 50%;
+}
+
+.etc_and_pay {
+    margin-top: 5px;
+    margin-right: 40px;
+    float: right;
+    display: inline;
+    
+}
+.etc_and_pay d1{
+	position: relative;
+    text-align: center;
+    padding: 0 8px;
+}
+
+.nav{ /* 为a标签外的盒子标签设置属性 */
+	display:inline-block;
+	float: left;
+	margin-top: 200px;
+    margin-right: 40px;  
+}
+.nav a{  /* 为图片下的div中的a设置属性 */
+	padding:25px;
+    padding-bottom: 9px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 宋体;
+}
+/* ========================================== */
+.page{ /* 设置颜色 */
+	background:#b0bcd0;
+} 
+.page .head{
+	background-color: #ffffff;
+}
+.logo{
+	margin-left: 20%; /* 边距 */
+	padding-top:3%; /* 上边距 */
+}
+.logo img{ /* logo图片 */
+	border-radius: 50%; /* 设为圆形 */
+    width: 60px;
+    height: 60px;
+    
+}
+/* 图片前的图案 */
+.stroke{
+	 display:inline-block; /* 设置行内块 */
+	 float: left;/* 设置行内块 */
+	 padding-bottom: 10%; /* 设置上边距 */
+}
+.stroke_img{
+	padding-bottom: 10%;	
+}
+.stroke img{
+	width:10%;
+	height:20%;
+	margin-left: 9%; /* 设置相对边距 */
+	border-radius: 50%;	
+}
+.Alltags{ /* 三个全部 */
+	padding-left: 30%; /* 设置边距 */
+	padding-bottom: 0.9% /* 设置下边距 */
+}
+.Alltags a{ /* 标签内部的距离 */
+	display: inline-block;
+    margin-left: 19px;
+    width: 130px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    background-color: #c0c0c0;
+    border-radius: 4px;
+    color: #666;
+}
+.head{ /* 边框 */
+	border:2px solid #ff8080;
+	width: 600px;
+	height: 400px;
+	margin: 0 auto;
+	padding-left: 3px; /* 设置内边距 */
+}
+
+.title{ /* 设置字体大小和外边距 */
+	display:inline-block; /* 变为行内快元素 */
+	font-size:10px;
+	margin-lift: 10px;
+}
+.banner{/* 设置题目字体大小 */
+	font-size:25px;
+}
+.time{ /* 设置日期字体大小 */
+	font-size:1px;
+}
+/* ========================================== */
+.contact{
+	width:100%;
+	height:130px;
+	background-color: #c0c0c0; /* 设置背景颜色 */
+
+}
+.contact a{ /* 设置字体颜色 */
+	color: #ff0080;
+}
+
+.contactus{ /* 关于联系我们 */
+	width: 80%;
+	height: 16%;
+	padding-left:20%; /* 内边距 */
+	padding-top:2%; /* 上边距 */
+	font-size:25px;
+}
+.information{ /* 营业信息 */
+	width: 80%;
+	height: 16%;
+	padding-left:35%;/* 内边距 */
+	padding-top:0.3%; /* 上边距 */
+}
+.information #inspan{
+	padding-left: 12%;
+	font-size:25px;
+}
+.Report{ /* 违法和不良信息 */
+	padding-left: 24%;
+	padding-top:0.9%;
+}
+

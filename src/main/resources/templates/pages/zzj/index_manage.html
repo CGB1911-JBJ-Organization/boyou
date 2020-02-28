@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+<meta charset="utf-8">
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0,maximum-scale=1.0"/>
+<!--width - viewport的宽度 height - viewport的高度
+initial-scale - 初始的缩放比例
+minimum-scale - 允许用户缩放到的最小比例
+maximum-scale - 允许用户缩放到的最大比例
+user-scalable - 用户是否可以手动缩放-->
+
+<meta name="description" content="" /><!--网站描述-->
+<meta name="keywords" content="" /><!--网站关键字-->
+
+<link href="/dist/css/zzj/css.css" rel="stylesheet" type="text/css">
+<link href="/dist/css/zzj/style.css" rel="stylesheet" type="text/css">
+<link href="/dist/css/zzj/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="/dist/css/zzj/font-awesome.css" rel="stylesheet" type="text/css">
+<title>数据验真平台后台管理</title>
+</head>
+
+
+
+
+
+
+<body>
+<div class="all" style="display:flex; display:-ms-flexbox; height:100%;">
+<div class="flow_L" id="FlowL" style="display:block;">
+  <div class="flow_head">
+    <img src="/dist/img/zzj/head.png"/>
+    <span>博游官方</span>
+
+    <span style="font-size: 12px;">职位:管理员</span>
+  </div>
+  <div class="all" style=" height:1px; background-color:#293241; border-top:1px solid #303A4A; border-bottom:1px solid #3D495D;"></div>
+  <div class="flow_menu" id="FlowMenu">
+    <a href="javascript:void(0);" class="flow_menuA" onClick='menuOnclick(this,1)' target="Content">
+      <span style="width:60px; text-align:center;"><i class="fa fa-home" aria-hidden="true"></i></span>
+      <span>系统首页</span>
+    </a>
+    <ul class="S_menu" id="S_menu1" style="display: none;">
+      <li><a href="menuX.html" target="Content">系统首页</a></li>
+      <li><a href="password.html" target="Content">修改密码</a></li>
+    </ul>
+    <a class="flow_menuB" onClick='menuOnclick(this,4)' target="Content">
+      <span style="width:60px; text-align:center;"><i class="fa fa-file-text" aria-hidden="true"></i></span>
+      <span>游记管理</span>
+    </a>
+    <ul class="S_menu" id="S_menu4" style="display: none;">
+      <li><a href="datails_1.html" target="Content">游记信息</a></li>
+      <!--<li><a href="datails_3.html" target="Content">景区详细页视频</a></li>-->
+    </ul>
+
+    <ul class="S_menu" id="S_menu5" style="display: none;">
+      <li><a href="datas_1.html" target="Content">市区数据</a></li>
+      <li><a href="datas_1A1.html" target="Content">景区数据</a></li>
+    </ul>
+    <a class="flow_menuB" onClick='menuOnclick(this,6)' target="Content">
+      <span style="width:60px; text-align:center;"><i class="fa fa-file-text" aria-hidden="true"></i></span>
+      <span>数据管理</span>
+    </a>
+    <ul class="S_menu" id="S_menu6" style="display: none;">
+      <li><a href="luru_1.html" target="Content">景区录入</a></li>
+      <li><a href="luru_2.html" target="Content">投诉录入</a></li>
+      <li><a href="luru_3.html" target="Content">非投诉录入</a></li>
+      <li><a href="luru_4.html" target="Content">高速录入</a></li>
+    </ul>
+    <ul class="S_menu" id="S_menu7" style="display: none;">
+      <li><a href="index_1.html" target="Content">操作日志</a></li>
+    </ul>
+    <a class="flow_menuB" onClick='menuOnclick(this,2)' target="Content">
+      <span style="width:60px; text-align:center;"><i class="fa fa-file-text" aria-hidden="true"></i></span>
+      <span>用户管理</span>
+    </a>
+    <ul class="S_menu" id="S_menu2" style="display: none;">
+      <li><a href="user.html" target="Content">用户列表</a></li>
+    </ul>
+  </div>
+
+</div>
+<div class="flow_R">
+  <div class="flow_top">
+    <a onClick="menu()" class="ft_switch" title="收起/展开菜单"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+    <div class="top_tit"><!--<img src="images/logo.jpg" style="width: 30px; height: 30px; display: block; float: left; padding: 10px 5px 0 0;"/>--> 欢迎使用博游平台</div>
+
+    <div class="top_link">
+      <a href="index.html" title="后台首页"><i class="fa fa-home" aria-hidden="true"></i></a>
+      <a href="#" title="注销登录"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+    </div>
+    
+  </div>
+  <div class="flow_Content">
+    <iframe id="FlowContent" src="menuX.html" name="Content"></iframe>
+  </div>
+</div>
+</div>
+</body>
+
+<script>
+function menu(){
+	var FlowL = document.getElementById("FlowL");
+	if( FlowL.style.display == "block"){ 
+		FlowL.style.display = "none";
+		}
+	else{
+		FlowL.style.display = "block";
+		}
+	}
+
+function menuOnclick(a,b){
+	var FlowMenu = document.getElementById("FlowMenu");
+  var MenuList = FlowMenu.getElementsByTagName("a");
+  if(a.className=="flow_menuB"){
+
+    for( var i = 0; i < MenuList.length ; i++){
+      var a1 = MenuList[i];
+      a1.className = "flow_menuB";
+        }
+	a.className="flow_menuA";	
+
+  var ullist = document.getElementsByTagName("ul");
+     
+     for(var i=0;i<ullist.length;i++){
+        ullist[i].style.display="none"; 
+     }
+     document.getElementById("S_menu"+b).style.display="block";
+  }
+  else if(a.className=="flow_menuA"){ 
+    document.getElementById("S_menu"+b).style.display="none";
+    a.className = "flow_menuB";
+  }
+  
+
+}
+
+
+</script>
+
+
+</html>

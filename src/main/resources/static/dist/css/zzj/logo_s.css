@@ -1,0 +1,52 @@
+
+
+.login_s{ width:100%; background-color:#323a45;}
+
+.tops{ width:1130px; height:100px; margin:0 auto; position:relative; border-bottom:1px solid #272e36;}
+.logo{ width:100%; height:64px; margin:0 auto; position:absolute; bottom:-32px; left:0; z-index:10;}
+.logo img{ background-color:#323a45; display:block; margin:0 auto; padding:0 30px;}
+.topss{ width:100%; height:2px; border-top:1px solid #3b4552; position:absolute; bottom:-4px; left:0; z-index:9;}
+
+
+.login_sc{ width:1040px; margin:150px auto 0;}
+@media only screen and (max-width: 1366px){.login_sc{ margin:100px auto 0;}}
+@media only screen and (max-width: 1280px){.login_sc{ margin:90px auto 0;} .tops{ height:60px;}}
+.login_sc img{ display:block; margin-bottom:-7px; float:left;}
+
+.login_inp{ width:360px; height:300px; float:left; margin:35px 0 0 50px;}
+.login_inpA{ width:100%; height:45px; line-height:45px; background-color:#4e5b6e; border:1px solid #262c34; border-radius:3px; margin-bottom:25px; color:#fff; position:relative;}
+.login_inpA span{ display:block; float:left; width:40px; text-shadow: 1px 1px 2px #333;}
+.login_inpA input{ width:300px; height:25px; padding:10px 0; background:none; border:none; float:left; color:#fff; -webkit-box-shadow: 0 0 0px 1000px #4e5b6e inset; text-shadow: 1px 1px 2px #333;}
+.login_inpA a img{ width:80px; height:45px; display:block; position:absolute; right:-85px; top:0; border-radius:3px;}
+.login_in{ width:100%;}
+.login_in input{ width:100%; height:45px; font-size:16px; color:#fff; border:none; cursor: pointer; border-radius:3px; background-color:#9a2c3a; text-shadow: 1px 1px 2px #621c25;}
+.login_in input:hover{ background-color:#86232f;}
+.login_in input:active{ background-color:#9a2c3a;}
+
+.tip{ width:100%; text-align:left; color:yellow; margin-top:10px;}
+
+
+
+
+
+
+
+
+
+.foot_s{ width:100%; font-size:12px; color:#999; padding:40px 0 20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

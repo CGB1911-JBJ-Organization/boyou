@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+<meta charset="utf-8">
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0,maximum-scale=1.0"/>
+<!--width - viewport的宽度 height - viewport的高度
+initial-scale - 初始的缩放比例
+minimum-scale - 允许用户缩放到的最小比例
+maximum-scale - 允许用户缩放到的最大比例
+user-scalable - 用户是否可以手动缩放-->
+
+<meta name="description" content="" /><!--网站描述-->
+<meta name="keywords" content="" /><!--网站关键字-->
+
+<link href="/dist/css/zzj/css.css" rel="stylesheet" type="text/css">
+<link href="/dist/css/zzj/style.css" rel="stylesheet" type="text/css">
+<link href="/dist/css/zzj/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="/dist/css/zzj/font-awesome.css" rel="stylesheet" type="text/css">
+
+
+<!--时间控件-->
+<!-- <script src="laydate/laydate.js"></script>
+<script> -->
+;!function(){
+
+//laydate.skin('molv');
+
+/*laydate({
+   elem: '#demo'
+})*/
+
+}();
+</script>
+
+
+<title>数据验真平台后台管理</title>
+</head>
+<body>
+<div class="flowC_top">
+  <i class="fa fa-map-marker" aria-hidden="true"></i>
+  <a href="#" target="_parent">用户管理</a>
+  <i class="fa fa-caret-right" aria-hidden="true"></i><span class="flowC_topX">用户列表</span>
+</div>
+<div class="flow_CC">
+  <div class="TitA"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;筛选查询</div>
+  <ul class="flow_search">
+    <li class="search_but">
+      <strong>景区</strong>
+      <span>
+      <select>
+        <option value="a">全部</option>
+        <option value="b">委领导</option>
+        <option value="c">办公室</option>
+        <option value="a">行业管理科</option>
+        <option value="b">产业发展科</option>
+        <option value="c">涉外管理科</option>
+      </select>
+    </span>
+    </li>
+    <li class="search_but">
+      <strong>负责人</strong>
+      <span>
+      <select>
+        <option value="a">全部</option>
+        <option value="b">委领导</option>
+        <option value="c">办公室</option>
+        <option value="a">行业管理科</option>
+        <option value="b">产业发展科</option>
+        <option value="c">涉外管理科</option>
+      </select>
+    </span>
+    </li>
+    <li class="search_but"><strong>开始时间</strong><span><input placeholder="请选择开始时间" class="laydate-icon" onclick="laydate()" type="text"></span></li>
+    <li class="search_but"><strong>结束时间</strong><span><input placeholder="请选择结束时间" class="laydate-icon" onclick="laydate()" type="text"></span></li>
+
+    <li class="search_butA" style="min-width: 90px;"><strong>&nbsp;</strong><span><input value="查询" type="button" class="ButBlue"></span></li>
+  </ul>
+</div>
+<div class="flow_CC">
+
+  <div class="ContentC Table_Xauto">
+    <div class="TitA">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;用户列表
+      <div class="full-right">
+
+        <input value="添加" onclick="window.location.href='user_add.html'" class="TableA_but" type="button">
+      </div>
+    </div>
+    <div class="ContentCA">
+      <div class="ConC_but">
+
+    	</div>
+      <div class="TableA">
+        <table style="border:1px solid #ccc;" width="100%" cellspacing="0" cellpadding="0" border="1">
+          <tbody>
+            <tr>
+              <th scope="col">登录账号</th>
+              <th scope="col">姓名</th>
+              <th scope="col">所属角色</th>
+              <th scope="col">添加时间</th>
+              <th scope="col">是否启用</th>
+              <th scope="col" width="300px">操作</th>
+            </tr>
+            <tr>
+              <td>windir</td>
+              <td>01</td>
+              <td>01</td>
+              <td>01</td>
+              <td>
+                <div class="switch-container">
+                  <input id="switch" type="checkbox" class="switch" checked/>
+                  <label for="switch" onclick="test()"></label>
+                </div>
+              <td>
+                <input value="编辑" onclick="window.location.href='user_changes.html'" class="TableA_but" type="button">
+                <input value="删除" class="TableA_but" type="button">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cc_page">
+        <input value="首页" disabled="" type="button">
+        <input value="上一页" disabled="" type="button">
+        <input value="下一页" type="button">
+        <input value="尾页" type="button">
+        <select>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <input placeholder="共10页" max="10" min="1" style="box-sizing: border-box; text-align: center; background-color: #f7f7f7; cursor:text;" type="number">
+        <input value="跳转" type="button">
+  </div>
+
+
+
+    </div>
+  </div>
+
+
+</div>
+
+
+</body>
+<script>
+    var test = function(){
+        console.log(!document.getElementById('switch').checked ? "选中" : "未选中");
+    }
+</script>
+</html>
