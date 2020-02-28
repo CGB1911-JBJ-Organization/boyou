@@ -12,7 +12,7 @@
 	<update id="deleteNoteInPage">
        update notes_user
        set noteStatus=0,
-       where notesId=#{id} and userId=#
+       where notesId=#{id}
    </update>
   
 

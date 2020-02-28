@@ -29,7 +29,7 @@ public class NoteController {
 	
 	@RequestMapping("deleteNoteInPage")
 	@ResponseBody
-	public JsonResult doValidById(Integer id,Integer user){
+	public JsonResult deleteNoteInPage(Integer id,Integer user){
 		noteService.deleteNoteInPage(id, user);//"admin"用户将来是登陆用户
 			return new JsonResult("update ok");
 	}

@@ -40,12 +40,11 @@ public class SpringShiroConfig {
 	  				 new LinkedHashMap<>();
 	  		 //静态资源允许匿名访问:"anon"
 	  		 map.put("/bower_components/**","anon");
-	  		 map.put("/build/**","anon");
 	  		 map.put("/dist/**","anon");
-	  		 //怎么设置页面
 	  		 
 	  		 //除了匿名访问的资源,其它都要认证("authc")后访问
-	  		 map.put("/**","authc"); 
+	  		  map.put("/doPageUI/homePages","authc"); 
+	  		  map.put("/doPageUI/add","authc"); 
 	  		 sfBean.setFilterChainDefinitionMap(map);
 	  		 return sfBean;
 	  	 }
