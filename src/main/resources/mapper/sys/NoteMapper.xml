@@ -8,6 +8,35 @@
 		from notes_user
 		where notesId=#{id}
 	</select>
+<<<<<<< HEAD
+  
+	<update id="updateNote" parameterType="com.cy.boyou.sys.entity.Note">
+		update notes_user
+			set 
+			userId=#{userId},
+			noteText=#{noteText},
+			noteImage=#{noteImage},
+			noteTime=now(),
+			noteAddr=#{noteAddr},
+			createTime=now(),
+			modifiedTime=now(),
+			createdUser=#{createdUser}
+		where notesId=#{notesId}
+	</update>
+    
+    <insert id="insertNote" parameterType="com.cy.boyou.sys.entity.Note"
+         useGeneratedKeys="true"
+         keyProperty="notesId" >
+    	insert into notes_user
+    	(notesId,userId,noteText,noteImage,
+    	noteTime,noteAddr,createTime,modifiedTime,createdUser) 
+    	values
+    	(#{notesId},#{userId},#{noteText},#{noteImage},
+    	 now(),#{noteAddr},now(),now(),
+    	 #{createdUser})
+    </insert>
+    
+=======
 	
 	<update id="deleteNoteInPage">
        update notes_user
@@ -17,4 +46,5 @@
   
 
       
+>>>>>>> branch 'master' of https://github.com/CGB1911-JBJ-Organization/boyou.git
   </mapper>
