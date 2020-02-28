@@ -10,14 +10,14 @@
 <link rel="stylesheet" type="text/css" href="/dist/css/footer.css">
 
 <script src="/bower_components/jquery-1.8.3.js"></script>
-<script src="/dist/js/boyouIndex/velocity.js"></script>
-<script src="/dist/js/boyouIndex/shutter.js"></script>
+<script src="/dist/js/velocity.js"></script>
+<script src="/dist/js/shutter.js"></script>
 
 </head>
 <body>
 	<div class="bigest" style="width: 100%;height: auto;">
-		<!-- 这里是左侧边栏 固定不动 -->·
-		<div class="left-body" style="position:fixed;">
+		<!-- 这里是左侧边栏 固定不动 -->
+		<div class="left-body">
 			<div class="yhm-up"></div>
 			<a href=""> <img src="/dist/img/image_index/touxiang.jpg"
 				width="100%" ;/> 用户名
@@ -49,7 +49,7 @@
 				<li><a href="">成为会员</a></li>
 				<li><a href="">订单</a></li>
 				<li><a href="">消息</a></li>
-				<li>请<a class="in" href="doPageUI/index">登录</a>或<a class="in" href="doPageUI/index">免费注册</a></li>
+				<li>请<a class="in" href="">登录</a>或<a class="in" href="">免费注册</a></li>
 			</div>
 			<div class="lanmu1">
 				<!-- LOGO 搜索框 天气 客服 -->
@@ -58,16 +58,12 @@
 					style="width: 20%; height: 40px; font-size: 16px;" /> <input
 					class="ss" type="button" ) />&emsp;&emsp; <img
 					src=" /dist/img/image_index/tq.png" class="tq" />&emsp;&emsp; <input
-					type="button" class="kf" onclick="kefu()"/>
+					type="button" class="kf" />
 			</div>
 			<div class="fenge">
 				<!-- 样式   分割   导航栏 -->
 				<div class="daohanglan">
-					<a href="boyou">首页</a>
-					<a href="doPageUI/favorite">热门景点</a>
-					<a href="doPageUI/travelAttractions">门票</a>
-					<a href="doPageUI/travelSquare">游记</a>
-					<a href="doPageUI/homePages">个人主页</a>
+					<a href="">首页</a> <a href="">门票</a> <a href="">游记</a> <a href="">我的主页</a>
 				</div>
 			</div>
 
@@ -541,7 +537,20 @@
 	</div>
 	<!-- 统一尾部 -->
 	<div class="footer" id="footer" style="width=100% height: auto;">
-		
+		<div class="middle">
+			<span class="line1"> <a href="">关于博游旅游网</a> <b>|</b> <a
+				href="">业务合作</a> <b>|</b> <a href="">加入我们</a> <b>|</b> <a href="">"严重违规失信"专项整治举报</a>
+				<b>|</b> <a href="">安全中心</a> <b>|</b> <a href="">About Us</a>
+			</span> <span class="line2"> Copyright @2020 boyou.com <a
+				href="http://www.beian.gov.cn/portal/recordQuery" target="_blank">京公网安备xxxxxxxxxxxxxx</a>
+				<a
+				href="http://www.beian.miit.gov.cn/publish/query/indexFirst.action"
+				target="_blank">京ICP备xxxxxxxx号</a> <a href="">京ICP证xxxxxx号</a> <a
+				href="">营业执照信息</a> <a href="">保险经纪资质</a> <a href="">(京)-非经营性-xxxx-xxxx</a>
+				<a href="">博游旅游网客服电话12345</a>
+			</span> <span class="line3">
+				违法和不良信息举报电话：010-69194277违法和不良信息举报邮箱：tousu@qunar.com </span>
+		</div>
 	</div>
 	<script>
 		/* 轮播图 */
@@ -550,17 +559,12 @@
 				shutterW : 1000, // 容器宽度
 				shutterH : 358, // 容器高度
 				isAutoPlay : true, // 是否自动播放
-				playInterval : 2500, // 自动播放时间
+				playInterval : 2000, // 自动播放时间
 				curDisplay : 6, // 当前显示页
 				fullPage : false
 			// 是否全屏展示
 			});
 		});
-	</script>
-	<script type="text/javascript">	
-		function kefu(){
-			alert("CGB1911长沙河西中心");
-		}
 	</script>
 </body>
 </html>

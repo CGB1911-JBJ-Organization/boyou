@@ -32,7 +32,6 @@ public class NoteController {
 		return noteObject;
 	}
 	
-	
 	@RequestMapping("deleteNoteInPage")
 	@ResponseBody
 	public JsonResult deleteNoteInPage(Integer id,Integer user){

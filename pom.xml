@@ -75,16 +75,7 @@
 			<artifactId>shiro-spring</artifactId>
 			<version>1.4.1</version>
 		</dependency>
-		
-		<!-- 图像处理jar包 -->
-		<dependency>
-      <groupId>net.coobird</groupId>
-      <artifactId>thumbnailator</artifactId>
-      <version>0.4.8</version>
-    </dependency>
 	</dependencies>
-	
-	
 
 	<build>
 		<plugins>
