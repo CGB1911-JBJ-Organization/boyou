@@ -47,30 +47,30 @@ CREATE TABLE `travel_attractions` (
 
 /*游记表 user_travels  travel_notes*/
 /*用户id,游记名,时间,地点,详情,类型,图片,*/
-DROP TABLE IF EXISTS `user_travel`;
-CREATE TABLE `user_travel` (
-`notesId`  int(9) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '游记ID' ,
-`userId`  int(9) UNSIGNED NOT NULL COMMENT '用户ID' ,
-`createdTime`  datetime NOT NULL COMMENT '游记创建时间' ,
-`modifiedTime`  datetime NULL DEFAULT NULL COMMENT '游记修改时间' ,
-`peopleCount`  int(3) NULL DEFAULT NULL COMMENT '游玩人数' ,
-`loveCount`  int(10) NULL DEFAULT NULL COMMENT '点赞数' ,
-`averagePay`  int(6) NULL DEFAULT NULL COMMENT '人均花费' ,
-`travelName`  varchar(255) NULL DEFAULT '' COMMENT '游记标题名称' ,
-`background_img_url`  varchar(255) NULL COMMENT '游记背景图片目录路径' ,
-PRIMARY KEY (`notesId`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `user_travels`;
+CREATE TABLE `user_travels` (
+  `notesId` int(9) unsigned NOT NULL AUTO_INCREMENT COMMENT '游记ID',
+  `userId` int(9) unsigned NOT NULL COMMENT '用户ID',
+  `createdTime` datetime NOT NULL COMMENT '游记创建时间',
+  `modifiedTime` datetime DEFAULT NULL COMMENT '游记修改时间',
+  `peopleCount` int(3) DEFAULT NULL COMMENT '游玩人数',
+  `loveCount` int(10) DEFAULT NULL COMMENT '点赞数',
+  `averagePay` int(6) DEFAULT NULL COMMENT '人均花费',
+  `travelName` varchar(255) DEFAULT '' COMMENT '游记标题名称',
+  `background_img_url` varchar(255) DEFAULT NULL COMMENT '游记背景图片目录路径',
+  PRIMARY KEY (`notesId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `travel_notes`;
 CREATE TABLE `travel_notes` (
-`id`  int NOT NULL AUTO_INCREMENT COMMENT '序号' ,
-`day`  int(3) NOT NULL COMMENT '第几天' ,
-`address`  varchar(50) NULL COMMENT '地点' ,
-`text`  text NULL COMMENT '游记内容' ,
-`imgUrl`  varchar(255) NULL DEFAULT '' COMMENT '图片目录路径' ,
-`notesId`  int(9) NOT NULL COMMENT '游记ID' ,
-PRIMARY KEY (`id`),
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '序号',
+  `notesId` int(9) unsigned NOT NULL COMMENT '游记ID',
+  `day` int(3) NOT NULL COMMENT '第几天',
+  `address` varchar(50) DEFAULT NULL COMMENT '地点',
+  `text` text COMMENT '游记内容',
+  `imgUrl` varchar(255) DEFAULT '' COMMENT '图片目录路径',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 /*门票表 tickets */
