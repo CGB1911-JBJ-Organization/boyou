@@ -8,12 +8,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cy.boyou.sys.entity.Note;
 import com.cy.boyou.sys.service.NoteService;
+import com.cy.boyou.sys.service.TravelNotesService;
+import com.cy.boyou.sys.vo.JsonResult;
+import com.cy.boyou.sys.vo.TravelNotes;
 
 
 
 @RestController 
 @RequestMapping("/note/")
 public class NoteController {
+	
 	@Autowired
 	private NoteService noteService;
 	
@@ -24,5 +28,4 @@ public class NoteController {
 		System.out.println("pageObject="+noteObject);
 		return noteObject;
 	}
-
 }

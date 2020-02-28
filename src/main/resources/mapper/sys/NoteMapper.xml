@@ -2,13 +2,17 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="com.cy.boyou.sys.dao.NoteDao">
-      <select id="findNoteById" resultType="com.cy.boyou.sys.entity.Note">
-		select *
-		from notes_user
-		where notesId=#{id}
-	</select>
-  
-
-      
-  </mapper>
+	<mapper namespace="com.cy.boyou.sys.dao.NoteDao">
+		<select id="findNoteById" resultType="com.cy.boyou.sys.entity.Note">
+			select *
+			from travel_notes
+			where notesId=#{notesId}
+		</select>
+		
+		<insert id="insertNote" parameterType="com.cy.boyou.sys.entity.Note">
+			insert into travel_notes
+			(notesId,day,address,text,imgUrl)
+			values
+			(#{notesId},#{day},#{address},#{text},#{imgUrl})
+		</insert>
+	</mapper>

@@ -23,7 +23,7 @@ public class NoteServiceImpl implements NoteService {
 	public Map<String, Object> findObjectById(Integer noteId) {
 		if(noteId==null||noteId<1)
 			throw new IllegalArgumentException("输入游记id不正确");
-		Note note=noteDao.findNoteById(noteId);
+		List<Note> note=noteDao.findNoteById(noteId);
 		Map<String,Object> map=new HashMap<>();
 		map.put("note", note);
 		return map;

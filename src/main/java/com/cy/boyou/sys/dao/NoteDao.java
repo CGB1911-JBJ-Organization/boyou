@@ -3,10 +3,7 @@ package com.cy.boyou.sys.dao;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-
 import com.cy.boyou.sys.entity.Note;
-import com.cy.boyou.sys.entity.User;
 
 @Mapper
 public interface NoteDao {
@@ -22,7 +19,7 @@ public interface NoteDao {
 	 * @param id
 	 * @return
 	 */
-	Note findNoteById(Integer id);
+	List<Note> findNoteById(Integer id);
 	/**
 	 * 写入游记信息
 	 * @param entity

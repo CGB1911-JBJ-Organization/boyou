@@ -1,34 +1,25 @@
 package com.cy.boyou.sys.entity;
 
-
-
 import java.io.Serializable;
-import java.util.Date;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 /**
- * 游记
- * @author 801
+ * 此类用于封装游记每天的游记内容
+ * @author LEF
  *
  */
-@Setter
-@Getter
-@ToString
-public class Note implements Serializable {/**
-	 * 
-	 */
-	private static final long serialVersionUID = -1348142498277345453L;
-	private Integer notesId;
-	private Integer userId;
-	private String noteText;//游记正文
-	private String noteImage;
-	private Date noteTime;//游记内容发生时间
-	private String noteAddr;
-	private Date createTime;//游记创建时间
-	private Date modifiedTime;//游记修改时间
-	private String createdUser;
 
+@Getter
+@Setter
+@ToString
+public class Note implements Serializable{
+	private static final long serialVersionUID = -1417492562519229420L;
+	private Integer id;//序号
+	private Integer notesId;//游记ID
+	private Integer day;//第几天
+	private String address;//地点
+	private String text;//游记内容
+	private String imgUrl;//图片目录路径
 }
