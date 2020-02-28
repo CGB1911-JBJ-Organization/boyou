@@ -40,8 +40,7 @@ public class PageController {
 	public String doPageMudule(@PathVariable String module) {
 		return "common/"+module;
 	}
-<<<<<<< HEAD
-=======
+
 	
 	/**
 	 * 此方法响应后台
@@ -61,5 +60,4 @@ public class PageController {
 	public String doLoginUI(@PathVariable String pageName){
 			return "sys/"+pageName;
 	}
->>>>>>> branch 'master' of https://github.com/CGB1911-JBJ-Organization/boyou.git
 }
