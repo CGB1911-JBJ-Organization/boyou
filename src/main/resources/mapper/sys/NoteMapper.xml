@@ -38,5 +38,4 @@
 		      where notesId=#{id}
 	 	 </update>
   
-
 </mapper>
