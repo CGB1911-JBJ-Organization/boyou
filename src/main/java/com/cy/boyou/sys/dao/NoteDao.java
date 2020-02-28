@@ -38,7 +38,7 @@ public interface NoteDao {
 	   * @param ids
 	   * @return
 	   */
-	  int deleteNote(Integer id);
+	  int deleteNoteInPage(Integer id,Integer user);
 	
      
 	  /**
