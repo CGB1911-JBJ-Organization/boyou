@@ -5,8 +5,8 @@
 <mapper namespace="com.cy.boyou.sys.dao.TravelNotesDao">
 	<insert id="insertTravelNotes" parameterType="com.cy.boyou.sys.entity.Travel">
 		insert into user_travels
-		(userId,createdTime,modifiedTime,peopleCount,loveCount,averagePay,travelName,background_img_url)
+		(userId,createdTime,peopleCount,averagePay,travelName,background_img_url)
 		values
-		(#{userId},#{createdTime},#{modifiedTime},#{peopleCount},#{loveCount},#{averagePay},#{travelName},#{backgroundImgUrl})
+		(#{userId},now(),#{peopleCount},#{averagePay},#{travelName},#{backgroundImgUrl})
 	</insert>
 </mapper>
