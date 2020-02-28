@@ -3,98 +3,98 @@
 /* Created on:     2019/2/22 23:10:29                           */
 /*==============================================================*/
 
-/*Êý¾Ý¿âÃû:boyou*/
+/*ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½:boyou*/
 CREATE DATABASE IF NOT EXISTS `boyou`  DEFAULT CHARACTER SET utf8;
 USE `boyou`;
 
-/*ÓÃ»§È¨ÏÞ±í*/
+/*ï¿½Ã»ï¿½È¨ï¿½Þ±ï¿½*/
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `user_id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ÓÃ»§id',
-  `user_account` varchar(20) DEFAULT NULL COMMENT 'ÕËºÅ',
-  `user_pwd` varchar(20) DEFAULT NULL COMMENT 'ÃÜÂë',
-  `user_salt` varchar(20) DEFAULT NULL COMMENT 'ÑÎÖµ',
-  `user_name` varchar(20) DEFAULT NULL COMMENT 'êÇ³Æ',
-  `user_birthday` date DEFAULT NULL COMMENT 'ÉúÈÕ',
-  `user_type` int(20) DEFAULT NULL COMMENT 'ÓÃ»§×´Ì¬1ÆÕÍ¨2VIP3ÓÎ¿Í4¹ÜÀí',
-  `note_number` int(20) DEFAULT NULL COMMENT 'ÓÎ¼ÇÊýÁ¿',
-  `travel_number` int(20) DEFAULT NULL COMMENT 'ÃÅÆ±ÊýÁ¿',
-  `user_sex` char(1)  COMMENT 'ÓÃ»§ÐÔ±ð',
-  `user_address` varchar(200) DEFAULT NULL COMMENT'µØÖ·',
-  `user_email` 	varchar(100) DEFAULT NULL COMMENT'ÓÊÏä',
-  `head_img` varchar(50)DEFAULT NULL COMMENT 'Í·ÏñµØÖ·', 
-  `travel_attractions-id` int(11) COMMENT '¾°ÇøID',
+  `user_id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ï¿½Ã»ï¿½id',
+  `user_account` varchar(20) DEFAULT NULL COMMENT 'ï¿½Ëºï¿½',
+  `user_pwd` varchar(20) DEFAULT NULL COMMENT 'ï¿½ï¿½ï¿½ï¿½',
+  `user_salt` varchar(20) DEFAULT NULL COMMENT 'ï¿½ï¿½Öµ',
+  `user_name` varchar(20) DEFAULT NULL COMMENT 'ï¿½Ç³ï¿½',
+  `user_birthday` date DEFAULT NULL COMMENT 'ï¿½ï¿½ï¿½ï¿½',
+  `user_type` int(20) DEFAULT NULL COMMENT 'ï¿½Ã»ï¿½×´Ì¬1ï¿½ï¿½Í¨2VIP3ï¿½Î¿ï¿½4ï¿½ï¿½ï¿½ï¿½',
+  `note_number` int(20) DEFAULT NULL COMMENT 'ï¿½Î¼ï¿½ï¿½ï¿½ï¿½ï¿½',
+  `travel_number` int(20) DEFAULT NULL COMMENT 'ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½',
+  `user_sex` char(1)  COMMENT 'ï¿½Ã»ï¿½ï¿½Ô±ï¿½',
+  `user_address` varchar(200) DEFAULT NULL COMMENT'ï¿½ï¿½Ö·',
+  `user_email` 	varchar(100) DEFAULT NULL COMMENT'ï¿½ï¿½ï¿½ï¿½',
+  `head_img` varchar(50)DEFAULT NULL COMMENT 'Í·ï¿½ï¿½ï¿½Ö·', 
+  `travel_attractions-id` int(11) COMMENT 'ï¿½ï¿½ï¿½ï¿½ID',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 
-/*¾°Çø±í travelAttractions */
-/*¾°ÇøID,¾°ÇøÃû³Æ,¾°ÇøÖ÷Ìâ,¾°ÇøµØÖ·,¾°ÇøÃÀÍ¼,Ô¤¶¨ÐëÖª,ÊÕ²Ø´ÎÊý*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ travelAttractions */
+/*ï¿½ï¿½ï¿½ï¿½ID,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼,Ô¤ï¿½ï¿½ï¿½ï¿½Öª,ï¿½Õ²Ø´ï¿½ï¿½ï¿½*/
 DROP TABLE IF EXISTS `travel_attractions`;
 CREATE TABLE `travel_attractions` (
-  `travel_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '¾°ÇøID',
-  `travel_name` varchar(30) DEFAULT NULL COMMENT '¾°ÇøÃû³Æ',
-   `travel_theme` varchar(20)DEFAULT NULL COMMENT '¾°ÇøÖ÷Ìâ',
-  `travel_img` varchar(50)DEFAULT NULL COMMENT '¾°ÇøÍ¼Æ¬', 
-   `travel_addr` varchar(20) DEFAULT NULL COMMENT '¾°ÇøµØÖ·',
-  `booking_notice` varchar(200) DEFAULT NULL COMMENT 'Ô¤¶¨ÐëÖª',
-  `favorite_number` int(10) DEFAULT NULL COMMENT 'ÊÕ²Ø´ÎÊý',
+  `travel_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ï¿½ï¿½ï¿½ï¿½ID',
+  `travel_name` varchar(30) DEFAULT NULL COMMENT 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   `travel_theme` varchar(20)DEFAULT NULL COMMENT 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+  `travel_img` varchar(50)DEFAULT NULL COMMENT 'ï¿½ï¿½ï¿½ï¿½Í¼Æ¬', 
+   `travel_addr` varchar(20) DEFAULT NULL COMMENT 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·',
+  `booking_notice` varchar(200) DEFAULT NULL COMMENT 'Ô¤ï¿½ï¿½ï¿½ï¿½Öª',
+  `favorite_number` int(10) DEFAULT NULL COMMENT 'ï¿½Õ²Ø´ï¿½ï¿½ï¿½',
   PRIMARY KEY (`travel_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 
-/*ÓÎ¼Ç±í user_travels  travel_notes*/
-/*ÓÃ»§id,ÓÎ¼ÇÃû,Ê±¼ä,µØµã,ÏêÇé,ÀàÐÍ,Í¼Æ¬,*/
-DROP TABLE IF EXISTS `user_travel`;
-CREATE TABLE `user_travel` (
-`notesId`  int(9) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'ÓÎ¼ÇID' ,
-`userId`  int(9) UNSIGNED NOT NULL COMMENT 'ÓÃ»§ID' ,
-`createdTime`  datetime NOT NULL COMMENT 'ÓÎ¼Ç´´½¨Ê±¼ä' ,
-`modifiedTime`  datetime NULL DEFAULT NULL COMMENT 'ÓÎ¼ÇÐÞ¸ÄÊ±¼ä' ,
-`peopleCount`  int(3) NULL DEFAULT NULL COMMENT 'ÓÎÍæÈËÊý' ,
-`loveCount`  int(10) NULL DEFAULT NULL COMMENT 'µãÔÞÊý' ,
-`averagePay`  int(6) NULL DEFAULT NULL COMMENT 'ÈË¾ù»¨·Ñ' ,
-`travelName`  varchar(255) NULL DEFAULT '' COMMENT 'ÓÎ¼Ç±êÌâÃû³Æ' ,
-`background_img_url`  varchar(255) NULL COMMENT 'ÓÎ¼Ç±³¾°Í¼Æ¬Ä¿Â¼Â·¾¶' ,
-PRIMARY KEY (`notesId`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+/*ï¿½Î¼Ç±ï¿½ user_travels  travel_notes*/
+/*ï¿½Ã»ï¿½id,ï¿½Î¼ï¿½ï¿½ï¿½,Ê±ï¿½ï¿½,ï¿½Øµï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,Í¼Æ¬,*/
+DROP TABLE IF EXISTS `user_travels`;
+CREATE TABLE `user_travels` (
+  `notesId` int(9) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ï¿½Î¼ï¿½ID',
+  `userId` int(9) unsigned NOT NULL COMMENT 'ï¿½Ã»ï¿½ID',
+  `createdTime` datetime NOT NULL COMMENT 'ï¿½Î¼Ç´ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+  `modifiedTime` datetime DEFAULT NULL COMMENT 'ï¿½Î¼ï¿½ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
+  `peopleCount` int(3) DEFAULT NULL COMMENT 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+  `loveCount` int(10) DEFAULT NULL COMMENT 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+  `averagePay` int(6) DEFAULT NULL COMMENT 'ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½',
+  `travelName` varchar(255) DEFAULT '' COMMENT 'ï¿½Î¼Ç±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+  `background_img_url` varchar(255) DEFAULT NULL COMMENT 'ï¿½Î¼Ç±ï¿½ï¿½ï¿½Í¼Æ¬Ä¿Â¼Â·ï¿½ï¿½',
+  PRIMARY KEY (`notesId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `travel_notes`;
 CREATE TABLE `travel_notes` (
-`id`  int NOT NULL AUTO_INCREMENT COMMENT 'ÐòºÅ' ,
-`day`  int(3) NOT NULL COMMENT 'µÚ¼¸Ìì' ,
-`address`  varchar(50) NULL COMMENT 'µØµã' ,
-`text`  text NULL COMMENT 'ÓÎ¼ÇÄÚÈÝ' ,
-`imgUrl`  varchar(255) NULL DEFAULT ' COMMENT 'Í¼Æ¬Ä¿Â¼Â·¾¶' ,
-`notesId`  int(9) NOT NULL COMMENT 'ÓÎ¼ÇID' ,
-PRIMARY KEY (`id`),
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ï¿½ï¿½ï¿½',
+  `notesId` int(9) unsigned NOT NULL COMMENT 'ï¿½Î¼ï¿½ID',
+  `day` int(3) NOT NULL COMMENT 'ï¿½Ú¼ï¿½ï¿½ï¿½',
+  `address` varchar(50) DEFAULT NULL COMMENT 'ï¿½Øµï¿½',
+  `text` text COMMENT 'ï¿½Î¼ï¿½ï¿½ï¿½ï¿½ï¿½',
+  `imgUrl` varchar(255) DEFAULT '' COMMENT 'Í¼Æ¬Ä¿Â¼Â·ï¿½ï¿½',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-/*ÃÅÆ±±í tickets */
-/*ÃÅÆ±ID,¾°ÇøID,ÃÅÆ±¼Û¸ñ,ÃÅÆ±ÀàÐÍ,*/
+/*ï¿½ï¿½Æ±ï¿½ï¿½ tickets */
+/*ï¿½ï¿½Æ±ID,ï¿½ï¿½ï¿½ï¿½ID,ï¿½ï¿½Æ±ï¿½Û¸ï¿½,ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½,*/
 DROP TABLE IF EXISTS `tickets`;
 CREATE TABLE `tickets` (
-  `tickets_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ÃÅÆ±id',
-  `user_id` int(10) COMMENT 'ÓÃ»§id',
-  `tickets_type` int(20) DEFAULT NULL COMMENT 'ÃÅÆ±ÀàÐÍ',
-   `tickets_price` double DEFAULT NULL COMMENT 'ÃÅÆ±¼Û¸ñ',
-   `attractions_id` int(20) DEFAULT NULL COMMENT '¾°ÇøID',
+  `tickets_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ï¿½ï¿½Æ±id',
+  `user_id` int(10) COMMENT 'ï¿½Ã»ï¿½id',
+  `tickets_type` int(20) DEFAULT NULL COMMENT 'ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½',
+   `tickets_price` double DEFAULT NULL COMMENT 'ï¿½ï¿½Æ±ï¿½Û¸ï¿½',
+   `attractions_id` int(20) DEFAULT NULL COMMENT 'ï¿½ï¿½ï¿½ï¿½ID',
   PRIMARY KEY (`tickets_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-insert  into `notes_user`values (1,100,1,'ºÜ¿ªÐÄ','/img/558k',NULL,'ÃÀÖÞ',NULL,NULL,'Àæ»¨'),
-(null,200,1,'»¹²»´í','/img/558k',NULL,'¶íÂÞË¹',NULL,NULL,'Àæ»¨'),
-(null,300,1,'ºÜºÃ','/img/ahk',NULL,'¼ÓÖÝ',NULL,NULL,'gh'),
-(null,400,1,'ºÜ¿ªÐÄ','/img/533',NULL,'ºè¹Ü',NULL,NULL,'Àæ»¨'),
-(null,500,1,'ºÜ¿ªÐÄ','/img/5454k',NULL,'ÓèÒÔ',NULL,NULL,'Àæ»¨'),
-(null,600,1,'ºÜ¿ªÐÄ','/img/5548k',NULL,'ÃÀÖÞ',NULL,NULL,'fhf'),
-(null,700,0,'ºÜ¿ªÐÄ','/img/asdak',NULL,'ÃÀÖÞ',NULL,NULL,'Àæfd'),
-(null,800,0,'ºÜ¿ªÐÄ','/img/dasd8k',NULL,'ÃÀÖÞ',NULL,NULL,'Àæ»¨'),
-(null,900,1,'ºÜ¿ªÐÄ','/img/gsdfg8k',NULL,'ÃÀÖÞ',NULL,NULL,'2131»¨'),
-(null,1000,1,'ºÜ¿ªÐÄ','/img/sdfg8k',NULL,'ÃÀÖÞ',NULL,NULL,'Àæ»¨'),
-(null,1100,0,'ºÜ¿ªÐÄ','/img/7748k',NULL,'ÃÀÖÞ',NULL,NULL,'Àæ»¨');
+insert  into `notes_user`values (1,100,1,'ï¿½Ü¿ï¿½ï¿½ï¿½','/img/558k',NULL,'ï¿½ï¿½ï¿½ï¿½',NULL,NULL,'ï¿½æ»¨'),
+(null,200,1,'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','/img/558k',NULL,'ï¿½ï¿½ï¿½ï¿½Ë¹',NULL,NULL,'ï¿½æ»¨'),
+(null,300,1,'ï¿½Üºï¿½','/img/ahk',NULL,'ï¿½ï¿½ï¿½ï¿½',NULL,NULL,'gh'),
+(null,400,1,'ï¿½Ü¿ï¿½ï¿½ï¿½','/img/533',NULL,'ï¿½ï¿½ï¿½',NULL,NULL,'ï¿½æ»¨'),
+(null,500,1,'ï¿½Ü¿ï¿½ï¿½ï¿½','/img/5454k',NULL,'ï¿½ï¿½ï¿½ï¿½',NULL,NULL,'ï¿½æ»¨'),
+(null,600,1,'ï¿½Ü¿ï¿½ï¿½ï¿½','/img/5548k',NULL,'ï¿½ï¿½ï¿½ï¿½',NULL,NULL,'fhf'),
+(null,700,0,'ï¿½Ü¿ï¿½ï¿½ï¿½','/img/asdak',NULL,'ï¿½ï¿½ï¿½ï¿½',NULL,NULL,'ï¿½ï¿½fd'),
+(null,800,0,'ï¿½Ü¿ï¿½ï¿½ï¿½','/img/dasd8k',NULL,'ï¿½ï¿½ï¿½ï¿½',NULL,NULL,'ï¿½æ»¨'),
+(null,900,1,'ï¿½Ü¿ï¿½ï¿½ï¿½','/img/gsdfg8k',NULL,'ï¿½ï¿½ï¿½ï¿½',NULL,NULL,'2131ï¿½ï¿½'),
+(null,1000,1,'ï¿½Ü¿ï¿½ï¿½ï¿½','/img/sdfg8k',NULL,'ï¿½ï¿½ï¿½ï¿½',NULL,NULL,'ï¿½æ»¨'),
+(null,1100,0,'ï¿½Ü¿ï¿½ï¿½ï¿½','/img/7748k',NULL,'ï¿½ï¿½ï¿½ï¿½',NULL,NULL,'ï¿½æ»¨');
 
 

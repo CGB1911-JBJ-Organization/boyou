@@ -15,7 +15,7 @@ public class User implements Serializable{
 		private Integer userId;
 		private String userAccount;
 		private String userPwd;
-		private String userNanme;
+		private String userName;
 		private String userSalt;//盐值
 		private String userEmail;
 		private String userAddress;
