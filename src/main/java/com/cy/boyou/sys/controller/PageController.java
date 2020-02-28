@@ -26,7 +26,7 @@ public class PageController {
 	 * @param pageName 页面名称
 	 * @return 页面路径
 	 */
-	@RequestMapping("doPageUi/{pageName}")
+	@RequestMapping("doPageUI/{pageName}")
 	public String doPageUi(@PathVariable String pageName) {
 		return "sys/"+pageName;
 	}
@@ -40,6 +40,7 @@ public class PageController {
 	public String doPageMudule(@PathVariable String module) {
 		return "common/"+module;
 	}
+
 	
 	/**
 	 * 此方法响应后台
@@ -49,5 +50,14 @@ public class PageController {
 	@RequestMapping("doManageUI/{moduleUI}")
 	public String doManageUI(@PathVariable String moduleUI) {
 		return "zzj/"+moduleUI;
+	}
+	
+	/**
+	 * 此方法响应加载登录界面
+	 * @return
+	 */
+	@RequestMapping("doLoginUI/{pageName}")
+	public String doLoginUI(@PathVariable String pageName){
+			return "sys/"+pageName;
 	}
 }

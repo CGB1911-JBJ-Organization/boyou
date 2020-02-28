@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cy.boyou.sys.entity.Note;
@@ -11,6 +12,8 @@ import com.cy.boyou.sys.service.NoteService;
 import com.cy.boyou.sys.service.TravelNotesService;
 import com.cy.boyou.sys.vo.JsonResult;
 import com.cy.boyou.sys.vo.TravelNotes;
+import com.cy.boyou.sys.vo.JsonResult;
+
 
 
 
@@ -28,4 +31,12 @@ public class NoteController {
 		System.out.println("pageObject="+noteObject);
 		return noteObject;
 	}
+	
+	@RequestMapping("deleteNoteInPage")
+	@ResponseBody
+	public JsonResult deleteNoteInPage(Integer id,Integer user){
+		noteService.deleteNoteInPage(id, user);//"admin"用户将来是登陆用户
+			return new JsonResult("update ok");
+	}
+
 }

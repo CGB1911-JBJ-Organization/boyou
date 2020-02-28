@@ -2,7 +2,8 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-	<mapper namespace="com.cy.boyou.sys.dao.NoteDao">
+
+<mapper namespace="com.cy.boyou.sys.dao.NoteDao">
 		<select id="findNoteById" resultType="com.cy.boyou.sys.entity.Note">
 			select *
 			from travel_notes
@@ -15,4 +16,32 @@
 			values
 			(#{notesId},#{day},#{address},#{text},#{imgUrl})
 		</insert>
-	</mapper>
+		
+		<select id="findNoteById" resultType="com.cy.boyou.sys.entity.Note">
+			select *
+			from notes_user
+			where notesId=#{id}
+		</select>
+  
+		<update id="updateNote" parameterType="com.cy.boyou.sys.entity.Note">
+			update notes_user
+				set 
+				userId=#{userId},
+				noteText=#{noteText},
+				noteImage=#{noteImage},
+				noteTime=now(),
+				noteAddr=#{noteAddr},
+				createTime=now(),
+				modifiedTime=now(),
+				createdUser=#{createdUser}
+			where notesId=#{notesId}
+		</update>
+	
+		<update id="deleteNoteInPage">
+		      update notes_user
+		      set noteStatus=0,
+		      where notesId=#{id}
+	 	 </update>
+  
+
+</mapper>

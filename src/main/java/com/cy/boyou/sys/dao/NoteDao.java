@@ -14,31 +14,40 @@ public interface NoteDao {
 	 * @return
 	 */
 	int updateNote(Note entity);
+	
+	
 	/**
 	 * 基于id获取游记信息
 	 * @param id
 	 * @return
 	 */
-	List<Note> findNoteById(Integer id);
+	
+	Note findNoteById(Integer id);
+
 	/**
 	 * 写入游记信息
 	 * @param entity
 	 * @return
 	 */
 	int insertNote(Note entity);
-	  /**
+	 
+	
+	/**
 	   * 基于id执行数据删除
 	   * @param ids
 	   * @return
 	   */
-	  int deleteNote(Integer id);
+	  int deleteNoteInPage(Integer id,Integer user);
 	
-     /**
+     
+	  /**
       * 按条件统计游记记录总数
       * @param username
       * @return
       */
 	int getNoteCount(String username);
+	
+	
 	/**
 	   * 基于条件查询当前页记录
 	   * @param username 查询条件
