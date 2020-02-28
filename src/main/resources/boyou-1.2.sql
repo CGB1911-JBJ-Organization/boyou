@@ -67,7 +67,7 @@ CREATE TABLE `travel_notes` (
 `day`  int(3) NOT NULL COMMENT '第几天' ,
 `address`  varchar(50) NULL COMMENT '地点' ,
 `text`  text NULL COMMENT '游记内容' ,
-`imgUrl`  varchar(255) NULL DEFAULT '' COMMENT '图片目录路径' ,
+`imgUrl`  varchar(255) NULL DEFAULT ' COMMENT '图片目录路径' ,
 `notesId`  int(9) NOT NULL COMMENT '游记ID' ,
 PRIMARY KEY (`id`),
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
