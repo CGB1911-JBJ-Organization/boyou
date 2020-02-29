@@ -63,6 +63,8 @@ public class BoyouUserRealm extends AuthorizingRealm {
 			//2.基于用户名查询用户信息
 			User user=
 			boyouUserDao.findUserByUserName(username);
+			User userpwd=
+					boyouUserDao.findUserByUserName(username);
 			//3.判定用户是否存在
 			if(user==null)
 			throw new UnknownAccountException();
@@ -74,7 +76,7 @@ public class BoyouUserRealm extends AuthorizingRealm {
 			SimpleAuthenticationInfo info=
 			new SimpleAuthenticationInfo(
 					user,//principal (身份)
-					user.getUserPwd(),//hashedCredentials
+					userpwd.getUserPwd(),//hashedCredentials
 					credentialsSalt, //credentialsSalt
 					getName());//realName
 			//6.返回封装结果
