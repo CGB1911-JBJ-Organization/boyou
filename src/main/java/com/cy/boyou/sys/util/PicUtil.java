@@ -52,6 +52,7 @@ public class PicUtil {
             e.printStackTrace();
             return "后端异常...";
         }
+        
     }
 
 //写一个删除方法，你们可以看情况修改

@@ -21,7 +21,8 @@ public class PicTestController {
 		System.out.println("pic测试");
 		PicUtil.singleFileUpload(pc1);
 		
-			return new JsonResult("update ok");
+			
+		return new JsonResult("update ok");
 	}
 
 }
