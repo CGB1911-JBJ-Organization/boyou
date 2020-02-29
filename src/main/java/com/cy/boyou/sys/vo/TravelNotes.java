@@ -23,11 +23,11 @@ public class TravelNotes extends Travel implements Serializable {
 	 */
 	private static final long serialVersionUID = -1348142498277345453L;
 	
-	private List<NoteVo> notesVo;
+	private List<NoteVo> notesVoList;
 
 	@Override
 	public String toString() {
-		return "TravelNotes [notes=" + notesVo + ", toString()=" + super.toString() + "]";
+		return "TravelNotes [notesVoList=" + notesVoList + ", toString()=" + super.toString() + "]";
 	}
 
 }

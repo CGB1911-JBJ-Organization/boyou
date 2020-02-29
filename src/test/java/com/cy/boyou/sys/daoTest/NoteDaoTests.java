@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.cy.boyou.sys.dao.NoteDao;
 import com.cy.boyou.sys.entity.Note;
+import com.cy.boyou.sys.vo.NoteVo;
 
 @SpringBootTest
 public class NoteDaoTests {

@@ -3,6 +3,7 @@
 $(function(){
 	$("#header").load("/doPageModule/header");
 	$("#footer").load("/doPageModule/footer");
+	$(".showArea").load("/travelSquare/dofindTravelNotes");
 })
 
 /* 点击更多事件函数,打开筛选输入框,输入时间 */

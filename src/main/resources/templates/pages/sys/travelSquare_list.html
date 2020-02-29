@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<li class="travelNotes" th:each="travelNote : ${travelNotesList}">
+	<a class="left" style="background-image: url(/dist/img/TravelSquare/iconFiles/user_Icon.jpg)"></a>
+	<div class="right">
+		<!-- 第一行标题 -->
+		<span class="title">
+			<a>[[${travelNote.travelName}]]</a>
+		</span>
+		<br>
+		<!-- 第二行简要信息 -->
+		<span class="line2">
+	    	<span class="line2_left">
+			<!-- 用户昵称 -->
+			<a class="userName" href="">黄振</a>
+	        <b>|</b>
+	        <!-- 行程信息 -->
+	        [[${#dates.format(travelNote.createdTime, 'yyyy-MM-dd')}]]出发
+	        <b>|</b>
+	                共[[${travelNote.notesVoList.size()}]]天
+	        <b>|</b>
+	                人均[[${travelNote.averagePay}]]元
+	        </span>
+	        <!-- 右侧点赞 -->
+	        <span class="line2_right">
+	            <!-- 不想看 -->
+	            <input type="button" value="不感兴趣"/>&emsp;
+	            <img  src="/dist/img/TravelSquare/iconFiles/is_love.png">
+	            <b>[[${travelNote.loveCount}]]</b>
+	        </span>                     
+	    </span>
+	    <!-- 第三行关键字 -->
+	    <span class="keywords">
+	            行程<b class="arrow">:</b>
+	            <b class="arrow" th:each="noteVo : ${travelNote.notesVoList}">[[${noteVo.address}]]></b>
+	    </span>
+	    <!-- 第四行图片 -->
+	    <span>
+	        <a class="travelPicture" th:each="imgName : ${travelNote.imgUrlList}">
+	            <img th:src="@{${travelNote.imgUrl}+${imgName.imgName}+${imgName.suffix}}">
+	        </a>
+	    </span>
+    </div>
+</li>
+
+</html>

@@ -21,5 +21,5 @@ public class Note implements Serializable{
 	private Integer day;//第几天
 	private String address;//地点
 	private String text;//游记内容
-	private String imgUrl;//图片目录路径
+
 }

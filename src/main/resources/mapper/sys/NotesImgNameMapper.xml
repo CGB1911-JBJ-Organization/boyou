@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cy.boyou.sys.dao.NotesImgNameDao">
+    <select id="doFindImgUrlsByNotesIdAndDay" resultType="com.cy.boyou.sys.entity.ImgName">
+        select * from notes_img
+	    <where>
+            <choose>
+                <when test="notesId != null">notesId=#{notesId}</when>
+                <when test="day != null">day=#{day}</when>
+                <otherwise>1=1</otherwise>
+            </choose>
+	    </where>
+    </select>
+</mapper>
