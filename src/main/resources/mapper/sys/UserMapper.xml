@@ -5,9 +5,9 @@
 
 <mapper namespace="com.cy.boyou.sys.dao.BoyouUserDao">
 	<select id="findUserByUserName"
-		resultMap="com.cy.boyou.sys.entity.User">
+		resultType="com/cy/boyou/sys/entity/User.java">
 		select *
-     	from user 
+     	from user
       	where user_account='${username}'
 	</select>
 </mapper>
