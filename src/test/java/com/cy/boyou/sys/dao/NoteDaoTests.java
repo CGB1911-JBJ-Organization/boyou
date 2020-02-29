@@ -19,8 +19,10 @@ public class NoteDaoTests {
 	@Test
 	public void findNoteById() {
 		System.out.println("测试");
-		Note note=noteDao.findNoteById(2);
-		System.out.println("note="+note);
+		/*
+		 * Note note=noteDao.findNoteById(2); 
+		 * System.out.println("note="+note);
+		 */
 	}
 	
 }
