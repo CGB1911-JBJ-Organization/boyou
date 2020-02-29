@@ -13,7 +13,7 @@ public interface BoyouUserDao {
 	 *
 	 */
 
-	@Select("select * from user where userName=#{username}")
+	//@Select("select * from user where userName=#{username}")
 	User findUserByUserName(String username);
 
 }
