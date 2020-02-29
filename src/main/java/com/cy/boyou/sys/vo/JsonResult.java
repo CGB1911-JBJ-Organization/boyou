@@ -29,6 +29,9 @@ public class JsonResult implements Serializable{
 		this.state=0;
 		this.message=e.getMessage();
 	}
+	public JsonResult() {
+	}
+
 	
 }
 
