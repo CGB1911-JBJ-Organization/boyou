@@ -14,7 +14,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords"
 	content="Innovative Login Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript">
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
 </script>
 <!-- Custom Theme files -->
 <link href="/dist/css/user/style.css" rel="stylesheet" type="text/css"
@@ -75,8 +77,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<form action="#" method="post">
 									<input type="text" class="username" id="usernameId"
 										name="username" placeholder="UserName" /> <input
-										type="password" class="password" id="passwordId" name="Password"
-										placeholder="Password" />
+										type="password" class="password" id="passwordId"
+										name="Password" placeholder="Password"
+										autocomplete=‘new-password’ />
 									<div class="wthree-text">
 										<ul>
 											<li><label class="anim"> <input type="checkbox"
@@ -98,10 +101,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="login-top sign-top">
 								<div class="agileits-login">
 									<form action="#" method="post">
-										<input type="text" name="Username" placeholder="Username" /> <input
-											type="password" class="password" name="Password"
-											placeholder="Password" required="" /> <label class="anim">
-											<input type="checkbox"
+										<input type="text" name="Username" placeholder="Username" />
+										<input type="password" class="password" name="Password"
+											placeholder="Password" autocomplete=‘new-password’ /> <label
+											class="anim"> <input type="checkbox"
 											onclick="if (this.checked) {enable()} else {disable()}"
 											class="checkbox"> <span> I accept the terms of
 												use</span>
@@ -128,19 +131,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //main -->
 	<script>
 		function doLogin() {
-			alert("--doLogin--");
+			//1.获得用户名密码
 			var params = {
 				username : $("#usernameId").val(),
 				password : $("#passwordId").val()
-			}
-			console.log(params);
-			var url = "doPageUI/index";
+			};
+			console.log("params", params);
+			alert("用户密码已获得？");
+			var url = "/user/doLogin";
 			$.post(url, params, function(result) {
 				if (result.state == 1) {
 					//跳转到对应的页面
 					location.href = "boyou-index?t=" + Math.random();
 				} else {
-					alert("用户名或密码错误");
+					console.log(result);
+					alert("stop");
 				}
 			});
 		}
