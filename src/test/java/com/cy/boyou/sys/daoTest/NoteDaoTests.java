@@ -1,5 +1,7 @@
 package com.cy.boyou.sys.daoTest;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,7 +38,7 @@ public class NoteDaoTests {
    }
    @Test
    public void findNoteByIdTest() {
-	   Note user = noteDao.findNoteById(13);
+	   List<Note> user = noteDao.findNoteById(13);
 	   System.out.println(user);
    }
 }

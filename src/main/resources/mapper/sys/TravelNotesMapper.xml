@@ -9,4 +9,11 @@
 		values
 		(#{userId},now(),#{peopleCount},#{averagePay},#{travelName},#{backgroundImgUrl})
 	</insert>
+	
+	<select id="doFindTravelNotes" resultType="com.cy.boyou.sys.vo.TravelNotes">
+		select * from user_travels
+		<if test="userId != null">
+			where userId=#{userId}
+		</if>
+	</select>
 </mapper>
