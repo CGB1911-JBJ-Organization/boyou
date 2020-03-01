@@ -6,6 +6,9 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import com.cy.boyou.sys.entity.Note;
+import com.cy.boyou.sys.vo.NoteVo;
+
+
 
 @Mapper
 public interface NoteDao {
@@ -25,6 +28,9 @@ public interface NoteDao {
 	 */
 	@Select("select * from travel_notes where notesId=#{id}")
 	List<Note> findNoteById(Integer id);
+	
+	@Select("select * from travel_notes where notesId=#{id}")
+	List<NoteVo> findNoteByNotesId(Integer notesId);
 
 	/**
 	 * 写入游记信息

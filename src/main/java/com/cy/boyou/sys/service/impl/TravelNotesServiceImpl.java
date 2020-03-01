@@ -1,6 +1,7 @@
 package com.cy.boyou.sys.service.impl;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -15,6 +16,7 @@ import com.cy.boyou.sys.entity.Note;
 import com.cy.boyou.sys.entity.Travel;
 import com.cy.boyou.sys.vo.NoteVo;
 import com.cy.boyou.sys.vo.TravelNotes;
+import com.cy.boyou.sys.vo.TravelSquareNotes;
 import com.cy.boyou.sys.service.TravelNotesService;
 
 @Service
@@ -40,7 +42,7 @@ public class TravelNotesServiceImpl implements TravelNotesService {
 		}
 		//取出游记内容
 		int rows2 = 0;
-		List<NoteVo> notes = entitys.getNotesVo();
+		List<NoteVo> notes = entitys.getNotesVoList();
 		//循环调用接口增加游记内容
 		for (Note note : notes) {
 			int rows = noteDao.insertNote(note);
@@ -67,26 +69,34 @@ public class TravelNotesServiceImpl implements TravelNotesService {
 		while (itr.hasNext()) {
 			TravelNotes travelNotes = (TravelNotes) itr.next();
 			//查询游记内容
-			List<Note> notes = noteDao.findNoteById(travelNotes.getNotesId());
-				//System.out.println(notes);
-			//创建游记内容Vo对象集合容器
-			List<NoteVo> noteVoList = new ArrayList<>();
+			List<NoteVo> notes = noteDao.findNoteByNotesId(travelNotes.getNotesId());
 			//迭代查询到的游记内容集合，并对游记内容对象的图片信息集合初始化
-			for (Note note : notes) {
-				//创建游记内容Vo对象并初始化
-				NoteVo noteVo = new NoteVo(note);
-				//基于游记内容Vo对象的游记id和第几天查询图片
-				List<ImgName> imgNameList = notesImgNameDao.doFindImgUrlsByNotesIdAndDay(noteVo.getNotesId(), noteVo.getDay());
+			Iterator<NoteVo> iterator = notes.iterator();
+			while (iterator.hasNext()) {
+				NoteVo note = (NoteVo) iterator.next();
+				List<ImgName> imgNameList = notesImgNameDao.doFindImgUrlsByNotesIdAndDay(note.getNotesId(), note.getDay());
 				//初始化游记内容Vo对象的图片信息集合
-				noteVo.setImgNameList(imgNameList);
-				//将游记内容Vo对象加入集合中
-				noteVoList.add(noteVo);
+				note.setImgNameList(imgNameList);
+				
 			}
 			//初始化游记的游记内容
-			travelNotes.setNotesVo(noteVoList);
+			travelNotes.setNotesVoList(notes);
 		}
 		System.out.println(list);
 		return list;
 	}
-
+	
+	public List<TravelSquareNotes> findToTravelSquare(){
+		List<TravelNotes> l = travelNotesDao.doFindTravelNotes(null);
+		List<TravelSquareNotes> list = new ArrayList<>();
+		for (TravelNotes travelNotes : l) {
+			travelNotes.setNotesVoList(noteDao.findNoteByNotesId(travelNotes.getNotesId()));
+			TravelSquareNotes tsn = new TravelSquareNotes(travelNotes);
+			List<ImgName> imgNameList = notesImgNameDao.doFindImgUrlsByNotesIdAndDay(travelNotes.getNotesId(), null);
+			tsn.setImgUrlList(imgNameList);
+			list.add(tsn);
+		}
+		System.out.println(list);
+		return list;
+	}
 }

@@ -13,5 +13,6 @@ public class TravelNotesImplTest {
 	@Test
 	public void test() {
 		travelNotesService.doFindTravelNotes();
+		//travelNotesService.findToTravelSquare();
 	}
 }
