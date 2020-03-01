@@ -27,7 +27,7 @@ public class TravelNotes extends Travel implements Serializable {
 
 	@Override
 	public String toString() {
-		return "TravelNotes [notesVoList=" + notesVoList + ", toString()=" + super.toString() + "]";
+		return "TravelNotes [notes=" + notesVoList + ", toString()=" + super.toString() + "]";
 	}
 
 }

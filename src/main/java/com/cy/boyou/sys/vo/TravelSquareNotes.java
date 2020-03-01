@@ -31,7 +31,7 @@ public class TravelSquareNotes extends TravelNotes implements Serializable{
 
 	public TravelSquareNotes(TravelNotes t) {
 		super();
-		this.setId(t.getId());
+		/* this.setId(t.getId()); */
 		this.setNotesId(t.getNotesId());
 		this.setUserId(t.getUserId());
 		this.setTravelName(t.getTravelName());
@@ -43,7 +43,7 @@ public class TravelSquareNotes extends TravelNotes implements Serializable{
 		this.setAveragePay(t.getAveragePay());
 		this.setBackgroundImgUrl(t.getBackgroundImgUrl());
 		this.setNotesVoList(t.getNotesVoList());
-		this.setImgUrl(t.getImgUrl());
+		/* this.setImgUrl(t.getImgUrl()); */
 	}
 	
 	

@@ -60,4 +60,9 @@ public class PageController {
 	public String doLoginUI(@PathVariable String pageName){
 			return "sys/"+pageName;
 	}
+	
+	@RequestMapping("test/{pageName}")
+	public String doTest(@PathVariable String pageName){
+			return "sys/"+pageName;
+	}
 }

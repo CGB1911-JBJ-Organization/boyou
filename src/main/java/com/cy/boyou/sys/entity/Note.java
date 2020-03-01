@@ -18,8 +18,9 @@ public class Note implements Serializable{
 	private static final long serialVersionUID = -1417492562519229420L;
 	private Integer id;//序号
 	private Integer notesId;//游记ID
+	private String title;//游记标题 
 	private Integer day;//第几天
 	private String address;//地点
 	private String text;//游记内容
-
+	private String imgUrl;//图片目录路径
 }

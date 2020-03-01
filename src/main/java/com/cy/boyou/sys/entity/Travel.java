@@ -14,7 +14,6 @@ public class Travel implements Serializable{
 	
 	
 	private static final long serialVersionUID = 3233411459462277411L;
-	private Integer id;
 	private Integer notesId;//游记ID
 	private Integer userId;//用户ID
 	private String travelName;//游记标题名称
@@ -24,5 +23,4 @@ public class Travel implements Serializable{
 	private Integer loveCount;//点赞数
 	private Integer averagePay;//人均花费
 	private String backgroundImgUrl;//游记背景图片目录路径
-	private String imgUrl;//图片目录路径
 }

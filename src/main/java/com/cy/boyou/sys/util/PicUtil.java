@@ -19,11 +19,11 @@ import net.coobird.thumbnailator.Thumbnails;
 public class PicUtil {
     //这是本地存入的格式，上传到服务器的话，格式类似于，"/root/images/pc/"
     //private static String UPLOAD_FOLDER = "D:/images/pc/";
-    private static String UPLOAD_FOLDER = "src\\main\\resources\\static\\dist\\img\\notePic";
+    private static String UPLOAD_FOLDER = "src\\main\\resources\\static\\dist\\img\\notePic\\";
     
    // private Logger logger = LoggerFactory.getLogger(picUtil.class);打日志用的
     //Thread.currentThread().getContextClassLoader().getResource("").getPath();(获取当前的绝对路径的方法，这里不用，得到的是这样的东西:file:/D:/java/eclipse32/workspace/jbpmtest3/bin/)
-    public static String singleFileUpload(MultipartFile pc1 ) throws IOException {
+    public static String singleFileUpload(String userName,MultipartFile pc1 ) throws IOException {
       // logger.debug("传入的文件参数：{}", JSON.toJSONString(file, true));      
        if (Objects.isNull(pc1) || pc1.isEmpty()) {//判断非空
            // logger.error("文件为空");
@@ -32,7 +32,9 @@ public class PicUtil {
         try {
             byte[] bytes = pc1.getBytes();
             //要存入本地的地址放到path里面
-            Path path = Paths.get( UPLOAD_FOLDER+"/");
+            String pathChange=StringUtil.joint(UPLOAD_FOLDER,userName);
+            Path path = Paths.get( pathChange+"/");
+            
             //如果没有files文件夹，则创建
             if (!Files.isWritable(path)) {
                 Files.createDirectories(path);

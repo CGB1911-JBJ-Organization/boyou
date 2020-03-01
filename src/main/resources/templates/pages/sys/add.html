@@ -7,12 +7,11 @@
 		<link rel="stylesheet" href="/dist/css/user/publish.css" />
 		<script type="text/javascript" src="/bower_components/jquery-1.8.3.js"></script>
 	</head>
-	
-	
 	<body>
-		
-	
-		<div class="b_header_box">
+<!-- 	<form enctype='multipart/form-data' action="/pic/pictest" method="post"> -->
+	<form enctype='multipart/form-data' action="/pic/pictest" method="post">
+	 
+		<div class="b_header_box"> 
 			<!-- 头部分(header) -->
 			<div class="header" id="header">
 				<div class="line1">
@@ -32,20 +31,22 @@
 							<img class="user_head" src="/dist/img/add/2.png"/>
 						</div>
 						<div class="e_hd_tit">
-							<input class="title_input" type="text" placeholder="为游记起一个拉轰的名字" maxlength="39">
+							<input id="title_input" class="title_input" name="travelName" type="text" placeholder="为游记起一个拉轰的名字" maxlength="39">
 						</div>
 			</div>
 		</div>
 		
-		<div class="clear"></div>
 		
-		<div class="mainbox">
+		
+		<div  class="mainbox" >
 			<div class="b_note_wrap">
 					<div class="b_note_body">
 							<div class="e_day">
 								<div class="e_day_hd">
 									<div class="day_title">
-										<div class="text">第一天</div>
+										<div class="text">
+										<input id="input_day1" type="text" name="notesId" class="poi_tit_ipt" placeholder="这是第几天(请输入整数)"/>
+										</div>
 										<div class="edit">
 											<a href="#"><img src="/dist/img/add/4.png"/></a>
 											<a href="#"><img src="/dist/img/add/5.png"/></a>
@@ -53,6 +54,7 @@
 									</div>
 									<div class="clear"></div>
 									<div class="ady_adds">
+									<input type="button" value="点击开始新的一天" onclick="addDiv()" />
 										<div class="slide-adds add_show"><a href="#"><img src="/dist/img/add/6.png"/></a></div>
 										<ul class="add_show">
 											<li>
@@ -80,19 +82,56 @@
 									<div class="e_poi_ct">
 										<div class="top">
 											<div class="poi_city">
-												<input type="text" class="poi_tit_ipt" placeholder="添加游玩地点（非必填）"/>
+												<input id="address_input1" type="text" name="address" class="poi_tit_ipt" placeholder="添加游玩地点（非必填）"/>
 											</div>
 										</div>
 										<div class="bottom">
 											<div class="e_edit_box">
-												<input class="video_upload_input" type="file" name="image" style="display: none;"/>
-												<div class="e_video"><a href="" class="video_upload"><img src="/dist/img/add/11.png"/></a></div>
-												<textarea placeholder="为这次旅行写一段华丽丽的开篇吧:)"></textarea>
+											 <input type="file" name="pc1">
+												<input class="video_upload_input" type="file" name="pc1" style="display: none;"/>
+												<div class="e_video"><img src="/dist/img/add/12.png"/></a></div>
+												<textarea id="text_input1" name="text" placeholder="为这次旅行写一段华丽丽的开篇吧"></textarea>
+											
 											</div>
 										</div>
 									</div>
-									
+
+									<div class="clear"></div>
+								</div>
+							</div>
+							
+					</div>
+			</div>
+			<div class="photo_wall">
+				<div class="swfcontainer">
+					<!-- <a href="" class="pics_upload">上传本地照片</a> -->
+				</div>
+				<div class="sidebar-bd">
+					<div class="bd-title">
+						<h4>全部照片</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
+			<div id="ttt4"   class="mainbox" hidden>
+			<div class="b_note_wrap">
+					<div class="b_note_body">
+							<div class="e_day">
+								<div class="e_day_hd">
+									<div class="day_title">
+										<div class="text">
+										<input id="input_day2" type="text" name="notesId" class="poi_tit_ipt" placeholder="这是第几天(请输入整数)"/>
+										</div>
+										<div class="edit">
+											<a href="#"><img src="/dist/img/add/4.png"/></a>
+											<a href="#"><img src="/dist/img/add/5.png"/></a>
+										</div>
+									</div>
+									<div class="clear"></div>
 									<div class="ady_adds">
+									<input type="button" value="点击开始新的一天" onclick="addDiv2()" />
 										<div class="slide-adds add_show"><a href="#"><img src="/dist/img/add/6.png"/></a></div>
 										<ul class="add_show">
 											<li>
@@ -116,14 +155,32 @@
 										</ul>
 									</div>
 									<div class="clear"></div>
+									
+									<div class="e_poi_ct">
+										<div class="top">
+											<div class="poi_city">
+												<input id="address_input2" type="text" name="address" class="poi_tit_ipt" placeholder="添加游玩地点（非必填）"/>
+											</div>
+										</div>
+										<div class="bottom">
+											<div class="e_edit_box">
+											 <input type="file" name="pc1">
+												<input class="video_upload_input" type="file" name="pc2" style="display: none;"/>
+												<div class="e_video"><img src="/dist/img/add/12.png"/></a></div>
+												<textarea id="text_input3" name="text" placeholder="为这次旅行写一段华丽丽的开篇吧"></textarea>
+											
+											</div>
+										</div>
+									</div>
+
+									<div class="clear"></div>
 								</div>
 							</div>
+							
 					</div>
 			</div>
 			<div class="photo_wall">
 				<div class="swfcontainer">
-					<a href="" class="pics_upload">上传本地照片</a>
-						<input class="pics_upload_input" type="file" style="display: none;"/>
 				</div>
 				<div class="sidebar-bd">
 					<div class="bd-title">
@@ -132,25 +189,134 @@
 				</div>
 			</div>
 		</div>
+		
+		
+		
+		<div id="ttt5"   class="mainbox" hidden>
+			<div class="b_note_wrap">
+					<div class="b_note_body">
+							<div class="e_day">
+								<div class="e_day_hd">
+									<div class="day_title">
+										<div class="text">
+										<input id="input_day3" type="text" name="notesId" class="poi_tit_ipt" placeholder="这是第几天(请输入整数)"/>
+										</div>
+										<div class="edit">
+											<a href="#"><img src="/dist/img/add/4.png"/></a>
+											<a href="#"><img src="/dist/img/add/5.png"/></a>
+										</div>
+									</div>
+									<div class="clear"></div>
+									<div class="ady_adds">
+									<input type="button" value="添加div" onclick="addDiv2()" />
+										<div class="slide-adds add_show"><a href="#"><img src="/dist/img/add/6.png"/></a></div>
+										<ul class="add_show">
+											<li>
+												<a href="#">
+													<img src="/dist/img/add/8.png" />
+													<span>添加目录/天</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<img src="/dist/img/add/9.png" />
+													<i>添加地点</i>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<img src="/dist/img/add/10.png" />
+													<i>旅行经验</i>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="clear"></div>
+									
+									<div class="e_poi_ct">
+										<div class="top">
+											<div class="poi_city">
+												<input id="address_input3" type="text" name="address" class="poi_tit_ipt" placeholder="添加游玩地点（非必填）"/>
+											</div>
+										</div>
+										<div class="bottom">
+											<div class="e_edit_box">
+											 <input type="file" name="pc1">
+												<input class="video_upload_input" type="file" name="pc3" style="display: none;"/>
+												<div class="e_video"><img src="/dist/img/add/12.png"/></a></div>
+												<textarea id="text_input3" name="text" placeholder="为这次旅行写一段华丽丽的开篇吧"></textarea>
+											</div>
+										</div>
+									</div>
+
+									<div class="clear"></div>
+								</div>
+							</div>
+							
+					</div>
+			</div>
+			<div class="photo_wall">
+				<div class="swfcontainer">
+					<!-- <a href="" class="pics_upload">上传本地照片</a> -->
+				</div>
+				<div class="sidebar-bd">
+					<div class="bd-title">
+						<h4>全部照片</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+	
+	
 	
 		<div class="clear"></div>
 		<div class="e_foot">
 			<div class="e_foot_box">
 				<div class="b_note_ft">
-					<a href="#"><img src="/dist/img/add/13.png"/></a>
-					<a href="#"><img src="/dist/img/add/14.png"/></a>
+				
+				<!-- submit -->
+				<input  type="submit" onclick="doSave()" value="发表游记" style="height:60px; width:400px;  outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 14px 14px;font-size: 24px;font-family: "Microsoft soft";">
+<!-- 					<a href="#"><img src="/dist/img/add/13.png"/></a>
+					<a href="#"><img src="/dist/img/add/14.png"/></a> -->
 				</div>
 			</div>
 		</div>
 		
+		
+		<div class="time" data-beacon="Date-qianyan" style="text-align:center;vertical-align:middle;">
+            <strong>出发时间</strong>
+            <input placeholder="选择出发日期" class="js_date textbox" type="text" value="2020-02-29" maxlength="10" ></div>
+        </div>
+           <div class="daycount js_hastip" data-beacon="routedays" style="text-align:center;vertical-align:middle;">
+            <strong>游玩人数</strong>
+            <input class="js_personcount" maxlength="3" value="1" type="text"><span class="number">人</span><span class="js_tips"><em class="number"></em><span></span></span>
+        </div>
+        <div class="daycount js_hastip" data-beacon="routedays" style="text-align:center;vertical-align:middle;">
+            <strong>游玩天数</strong>
+            <input class="js_daycount" maxlength="3" value="1" type="text"><span class="yuan">天</span><span class="js_tips"><em class="number"></em><span></span></span>
+        </div>
+        <div class="per js_hastip" data-beacon="renjunxiaofei" style="text-align:center;vertical-align:middle;">
+            <strong>消费人均</strong>
+            <input  class="js_price" name="averagePay" maxlength="8" value="" type="text"><span class="yuan">元</span><span class="js_tips"><em class="number"></em><span></span></span>
+        </div>
+        
+        
+	</form>
 		<!-- 尾部分(footer) -->
 		<div class="footer" id="footer">
 		</div>
 
-	<script>
+	<script type="text/javascript">
 		$(function(){
+			/* debugger */
 			$("#footer").load("/doPageModule/footer",function(){});
 			$("#header .line1").load("/doPageModule/logged-in_Line");
+			alert
+			$(".e_foot e_foot_box ").on("click",".b_note_ft",doSave)
 		})
 		$(".dropdown_show").hover(function(){
 			$(".dropdown_dd").show();
@@ -179,6 +345,61 @@
 		$('.pics_upload').click(function() {
 		    $(".pics_upload_input").click();
 		})
+		
+		function addDiv() {
+  			 /* $('body').append("<div id='div'>测试</div>");  */
+  			   alert("json数组为");  
+  		 $("#ttt4").show();
+   		 }
+		
+		function addDiv2() {
+ 		 $("#ttt5").show();
+  		 }
+
+		
+		   function doSave() {
+		        var url = "/pic/pictest";
+		        /* var params = {"input":$("input[type='text']").val(), "password":$("input[type='password']").val()}; */
+		        var travelNotes = {
+		        		"travelName":{},
+		        		"address":{},
+		        		"peopleCount":{},
+		        	  "noteVo":[          
+		        	   {
+		        	  "address":"北京",            
+		        	  "text":"旅游经验",     
+		        	 "day":3,                 
+		        	  }
+		        	      ]
+		        	   } 
+		        
+		        travelNotes.peopleCount=$(".js_personcount").val();
+		        travelNotes.travelName=$("#title_input").val();
+		        travelNotes.address=$("#address_input").val();
+		        travelNotes.js_daycount=$("input[class='js_daycount']").val();
+		        travelNotes.noteVo[0]={"address":$("#address_input1").val(),"text":$("#text_input1").val(), "day":$("#input_day1").val()};
+		        travelNotes.noteVo[1]={"address":$("#address_input2").val(),"text":$("#text_input2").val(), "day":$("#input_day2").val()};
+		        travelNotes.noteVo[2]={"address":$("#address_input3").val(),"text":$("#text_input3").val(), "day":$("#input_day3").val()};
+		        
+		        alert("json数组为："+JSON.stringify(travelNotes));  
+
+		       
+/* 		        var json = JSON.stringify(noteVo);
+		        alert("json数组为："+json);   */
+		        $.ajax({
+		                "url" : url,
+		                "data" : travelNotes,
+		                "type" : "post",
+		                "success" : function(travelNotes) {
+		                    // 参数为json类型的对象
+		                    alert(travelNotes.message)
+		                },
+		                "error" : function() {
+		                    alert("错误");
+		                }
+		            });
+
+		        }
 	</script>
 		</body>
 </html>

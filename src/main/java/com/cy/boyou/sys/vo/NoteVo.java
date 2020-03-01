@@ -40,5 +40,6 @@ public class NoteVo extends Note implements Serializable{
 		this.setDay(note.getDay());
 		this.setAddress(note.getAddress());
 		this.setText(note.getText());
+		this.setImgUrl(note.getImgUrl());
 	}
 }
