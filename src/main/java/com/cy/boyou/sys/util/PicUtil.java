@@ -40,7 +40,7 @@ public class PicUtil {
                 Files.createDirectories(path);
             }                    
             String extension = getFileExtension(pc1);  //获取文件后缀       
-          System.out.println("测试图片添加");
+          System.out.println("测试图片添加ok");
            UUID uuid = UUID.randomUUID();  //这里调用了UUID，得到全宇宙唯一的命名
             String str = uuid.toString(); // 真正的UUID打印出来是这样的：xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx (8-4-4-4-12)         
           //所以我们可以去掉去掉"-"符号

@@ -9,7 +9,7 @@
 	</head>
 	<body>
 <!-- 	<form enctype='multipart/form-data' action="/pic/pictest" method="post"> -->
-	<form enctype='multipart/form-data' action="/pic/pictest" method="post">
+	<form  id="submitForm" enctype='multipart/form-data' action="/pic/pictest" method="post">
 	 
 		<div class="b_header_box"> 
 			<!-- 头部分(header) -->
@@ -88,7 +88,7 @@
 										<div class="bottom">
 											<div class="e_edit_box">
 											 <input type="file" name="pc1">
-												<input class="video_upload_input" type="file" name="pc1" style="display: none;"/>
+												<input class="video_upload_input" type="file" name="pc1-1" style="display: none;"/>
 												<div class="e_video"><img src="/dist/img/add/12.png"/></a></div>
 												<textarea id="text_input1" name="text" placeholder="为这次旅行写一段华丽丽的开篇吧"></textarea>
 											
@@ -164,8 +164,8 @@
 										</div>
 										<div class="bottom">
 											<div class="e_edit_box">
-											 <input type="file" name="pc1">
-												<input class="video_upload_input" type="file" name="pc2" style="display: none;"/>
+											 <input type="file" name="pc2">
+												<input class="video_upload_input" type="file" name="pc2-1" style="display: none;"/>
 												<div class="e_video"><img src="/dist/img/add/12.png"/></a></div>
 												<textarea id="text_input3" name="text" placeholder="为这次旅行写一段华丽丽的开篇吧"></textarea>
 											
@@ -241,8 +241,8 @@
 										</div>
 										<div class="bottom">
 											<div class="e_edit_box">
-											 <input type="file" name="pc1">
-												<input class="video_upload_input" type="file" name="pc3" style="display: none;"/>
+											 <input type="file" name="pc3">
+												<input class="video_upload_input" type="file" name="pc3-1" style="display: none;"/>
 												<div class="e_video"><img src="/dist/img/add/12.png"/></a></div>
 												<textarea id="text_input3" name="text" placeholder="为这次旅行写一段华丽丽的开篇吧"></textarea>
 											</div>
@@ -277,11 +277,8 @@
 		<div class="e_foot">
 			<div class="e_foot_box">
 				<div class="b_note_ft">
-				
-				<!-- submit -->
+				<!-- submit  onclick="doSave()"-->
 				<input  type="submit" onclick="doSave()" value="发表游记" style="height:60px; width:400px;  outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 14px 14px;font-size: 24px;font-family: "Microsoft soft";">
-<!-- 					<a href="#"><img src="/dist/img/add/13.png"/></a>
-					<a href="#"><img src="/dist/img/add/14.png"/></a> -->
 				</div>
 			</div>
 		</div>
@@ -293,7 +290,7 @@
         </div>
            <div class="daycount js_hastip" data-beacon="routedays" style="text-align:center;vertical-align:middle;">
             <strong>游玩人数</strong>
-            <input class="js_personcount" maxlength="3" value="1" type="text"><span class="number">人</span><span class="js_tips"><em class="number"></em><span></span></span>
+            <input id="peopleCount_input" class="js_personcount" name="peopleCount" maxlength="3" value="1" type="text"><span class="number">人</span><span class="js_tips"><em class="number"></em><span></span></span>
         </div>
         <div class="daycount js_hastip" data-beacon="routedays" style="text-align:center;vertical-align:middle;">
             <strong>游玩天数</strong>
@@ -301,7 +298,7 @@
         </div>
         <div class="per js_hastip" data-beacon="renjunxiaofei" style="text-align:center;vertical-align:middle;">
             <strong>消费人均</strong>
-            <input  class="js_price" name="averagePay" maxlength="8" value="" type="text"><span class="yuan">元</span><span class="js_tips"><em class="number"></em><span></span></span>
+            <input id="averagePay_input" class="js_price" name="averagePay" maxlength="8" value="" type="text"><span class="yuan">元</span><span class="js_tips"><em class="number"></em><span></span></span>
         </div>
         
         
@@ -362,9 +359,9 @@
 		        /* var params = {"input":$("input[type='text']").val(), "password":$("input[type='password']").val()}; */
 		        var travelNotes = {
 		        		"travelName":{},
-		        		"address":{},
+		        		"averagePay":{},
 		        		"peopleCount":{},
-		        	  "noteVo":[          
+		        	  "notesVoList":[          
 		        	   {
 		        	  "address":"北京",            
 		        	  "text":"旅游经验",     
@@ -375,11 +372,12 @@
 		        
 		        travelNotes.peopleCount=$(".js_personcount").val();
 		        travelNotes.travelName=$("#title_input").val();
-		        travelNotes.address=$("#address_input").val();
+		        travelNotes.averagePay=$("#averagePay_input").val();
+		        
 		        travelNotes.js_daycount=$("input[class='js_daycount']").val();
-		        travelNotes.noteVo[0]={"address":$("#address_input1").val(),"text":$("#text_input1").val(), "day":$("#input_day1").val()};
-		        travelNotes.noteVo[1]={"address":$("#address_input2").val(),"text":$("#text_input2").val(), "day":$("#input_day2").val()};
-		        travelNotes.noteVo[2]={"address":$("#address_input3").val(),"text":$("#text_input3").val(), "day":$("#input_day3").val()};
+		        travelNotes.notesVoList[0]={"address":$("#address_input1").val(),"text":$("#text_input1").val(), "day":$("#input_day1").val()};
+		        travelNotes.notesVoList[1]={"address":$("#address_input2").val(),"text":$("#text_input2").val(), "day":$("#input_day2").val()};
+		        travelNotes.notesVoList[2]={"address":$("#address_input3").val(),"text":$("#text_input3").val(), "day":$("#input_day3").val()};
 		        
 		        alert("json数组为："+JSON.stringify(travelNotes));  
 

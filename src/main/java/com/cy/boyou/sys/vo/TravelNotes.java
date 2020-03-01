@@ -9,6 +9,7 @@ import com.cy.boyou.sys.entity.Travel;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * 此类封装整个游记
@@ -27,7 +28,13 @@ public class TravelNotes extends Travel implements Serializable {
 
 	@Override
 	public String toString() {
-		return "TravelNotes [notes=" + notesVoList + ", toString()=" + super.toString() + "]";
+		return "TravelNotes [notesVoList=" + notesVoList + ", getNotesVoList()=" + getNotesVoList() + ", getNotesId()="
+				+ getNotesId() + ", getUserId()=" + getUserId() + ", getTravelName()=" + getTravelName()
+				+ ", getCreatedTime()=" + getCreatedTime() + ", getModifiedTime()=" + getModifiedTime()
+				+ ", getPeopleCount()=" + getPeopleCount() + ", getLoveCount()=" + getLoveCount() + ", getAveragePay()="
+				+ getAveragePay() + ", getBackgroundImgUrl()=" + getBackgroundImgUrl() + "]";
 	}
+
+
 
 }
