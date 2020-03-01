@@ -6,6 +6,7 @@ $(function(){
 	$("#footer").load("/doPageModule/footer");
 })
 -->
+
 <header id="header">
 	<div  class="line1">
 	   <!-- 最上层,登录,注册,消息,订单,积分商城,联系客服 -->
@@ -13,15 +14,15 @@ $(function(){
 	   <li><a>积分商城</a></li>
 	   <li><a>订单</a></li>
 	   <li><a>消息</a></li>
-	   <c:if test="${empty user}">
+	   <th:if test="${empty user}">
 	  		<li>请<a class="in" href="/doPageUI/index">登录</a>或
 	   		<a class="in" href="/doPageUI/index">免费注册</a>
 	   		</li>
-		</c:if>		
-		<c:if test="${!empty user}">
-			<li><a class="ining" href="#">${user.name}</a></li>
+		</th:if>		
+		<th:if test="${!empty user}">
+			<li><a class="ining" href="#">已登录账号</a></li>
 			<li><a class="ining" href="#">退出</a></li>
-		</c:if>	
+		</th:if>	
 	
 	
 	</div>

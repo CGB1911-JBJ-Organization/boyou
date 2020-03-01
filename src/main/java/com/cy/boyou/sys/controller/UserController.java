@@ -3,18 +3,26 @@ package com.cy.boyou.sys.controller;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cy.boyou.sys.entity.User;
+import com.cy.boyou.sys.service.BoyouUserService;
 import com.cy.boyou.sys.vo.JsonResult;
 
 @RequestMapping("/user/")
 @RestController
 public class UserController {
+	
+	@Autowired
+	private BoyouUserService boyouUserService;
+	
 	@RequestMapping("doLogin")
 	@ResponseBody
-	public JsonResult doLogin(String username, String password) {
+	public JsonResult doLogin(String username, String password,Model model) {
 		// 1.获取Subject对象
 		Subject subject = SecurityUtils.getSubject();
 		// 2.通过Subject提交用户信息,交给shiro框架进行认证操作

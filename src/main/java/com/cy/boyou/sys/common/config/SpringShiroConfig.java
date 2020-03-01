@@ -43,7 +43,7 @@ public class SpringShiroConfig {
 		map.put("/doPageUI/homePages", "authc");
 		map.put("/doPageUI/add", "authc");
 		sfBean.setFilterChainDefinitionMap(map);
-		sfBean.setSuccessUrl("/boyou-index");
+		/* sfBean.setSuccessUrl("/boyou-index"); */
 		return sfBean;
 	}
 
