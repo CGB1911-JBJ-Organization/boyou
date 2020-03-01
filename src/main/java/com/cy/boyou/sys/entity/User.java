@@ -1,7 +1,13 @@
 package com.cy.boyou.sys.entity;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.apache.shiro.subject.PrincipalCollection;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +32,5 @@ public class User implements Serializable{
 		private String userEmail;
 		private String headImg;//头像地址
 		private Integer travelNumber;//景区ID
-
-	
+		
 }

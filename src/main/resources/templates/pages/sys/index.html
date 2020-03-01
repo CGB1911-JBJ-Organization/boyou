@@ -140,9 +140,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			alert("用户密码已获得？");
 			var url = "/user/doLogin";
 			$.post(url, params, function(result) {
-				if (result.state == 1) {
+				if (result.state==1) {
 					//跳转到对应的页面
-					location.href = "boyou-index?t=" + Math.random();
+					location.href = "/boyou?t=" + Math.random();
 				} else {
 					console.log(result);
 					alert("stop");

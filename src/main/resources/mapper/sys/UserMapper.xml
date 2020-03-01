@@ -5,7 +5,7 @@
 
 <mapper namespace="com.cy.boyou.sys.dao.BoyouUserDao">
 	<select id="findUserByUserName"
-		resultType="com/cy/boyou/sys/entity/User.java">
+		resultType="com.cy.boyou.sys.entity.User">
 		select *
      	from user
       	where user_account='${username}'
